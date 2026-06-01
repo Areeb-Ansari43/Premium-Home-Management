@@ -2,10 +2,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0;url=/">
 <script>
+  // Save the requested path and redirect to homepage
   const path = window.location.pathname.substring(1);
-  localStorage.setItem('redirectPath', path);
+  if (path && path !== '') {
+    localStorage.setItem('redirectPath', path);
+  }
   window.location.href = '/';
 </script>
 </head>
