@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Premium Home Management | Luxury Real Estate Luton & London</title>
+<!-- SEO Meta Tags -->
+<meta name="description" content="Premium Home Management - Professional purchase, leasing and management of luxury properties across Luton, Bedfordshire, Hertfordshire and Greater London. Trusted since 2022.">
+<meta name="keywords" content="property management, Luton, London, lettings, landlord, luxury real estate, rentals, Bedfordshire, Hertfordshire">
+<meta name="author" content="Premium Home Management">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Premium Home Management | Luxury Real Estate">
+<meta property="og:description" content="Professional purchase, leasing and management of premium properties across Luton & Greater London.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://premiumhomemgmt.co.uk">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Premium Home Management">
+<link rel="canonical" href="https://premiumhomemgmt.co.uk">
+<!-- Schema.org structured data -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Premium Home Management","url":"https://premiumhomemgmt.co.uk","telephone":"020 3002 2999","email":"info@premiumhomemgmt.co.uk","address":{"@type":"PostalAddress","streetAddress":"68-72 Stuart St","addressLocality":"Luton","postalCode":"LU1 2SW","addressCountry":"GB"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}]}</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --gold:#C6A15B;--gold-dk:#A77F3E;--gold-lt:#F0DEB4;--gold-glow:rgba(198,161,91,0.25);
+  --ink:#0E1A18;--ink-soft:#1C2826;--cream:#FDFAF4;--stone:#F2EDE3;--stone2:#E8E0D0;
+  --muted:#7A8A84;--white:#FFFFFF;
+  --shadow:0 24px 48px -12px rgba(14,26,24,0.1);--shadow-lg:0 40px 80px -20px rgba(14,26,24,0.18);
+  --r:28px;--r-sm:16px;--r-lg:48px;
+  --fs-xs:0.75rem;--fs-sm:0.875rem;--fs-base:1rem;--fs-lg:1.125rem;--fs-xl:1.25rem;
+}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:var(--stone);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px;}
+
+/* ─── NAVBAR ─── */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(1rem,5%,5%);height:72px;
+  background:rgba(253,250,244,0.95);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(198,161,91,0.15);transition:all 0.4s ease;
+}
+.navbar.scrolled{box-shadow:0 8px 32px -8px rgba(14,26,24,0.12);}
+.logo{display:flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none;flex-shrink:0;}
+.logo-img{height:44px;width:44px;object-fit:contain;}
+.logo-text .top{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.5vw,1.35rem);font-weight:600;color:var(--ink);}
+.logo-text .sub{font-size:0.55rem;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-top:-2px;}
+.nav-links{display:flex;gap:0;list-style:none;align-items:center;flex-wrap:wrap;}
+.nav-links li{cursor:pointer;font-weight:500;font-size:clamp(0.78rem,1.2vw,0.88rem);letter-spacing:0.4px;color:var(--muted);padding:7px clamp(8px,1.5vw,16px);border-radius:40px;transition:all 0.25s;user-select:none;white-space:nowrap;}
+.nav-links li:hover{color:var(--ink);}
+.nav-links li.active-page{color:var(--gold);background:rgba(198,161,91,0.1);}
+.nav-cta{background:var(--ink)!important;color:var(--white)!important;padding:8px 18px!important;border-radius:40px!important;font-weight:600!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--ink)!important;}
+.nav-hamburger{display:none;cursor:pointer;flex-direction:column;gap:5px;padding:8px;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:0.3s;}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+
+/* ─── PAGES ─── */
+.page{display:none;padding-top:72px;min-height:100vh;}
+.page.active-page{display:block;}
+.page-enter{animation:pageIn 0.5s cubic-bezier(0.22,1,0.36,1) forwards;}
+@keyframes pageIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* ─── BADGE STRIP ─── */
+.badge-strip{background:var(--gold);padding:0.65rem clamp(1rem,8%,8%);display:flex;gap:clamp(1rem,3vw,3rem);align-items:center;overflow:hidden;white-space:nowrap;flex-wrap:nowrap;}
+.badge-strip span{font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ink);flex-shrink:0;}
+
+/* ─── HERO ─── */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;padding:4rem clamp(1.5rem,8%,8%);}
+.hero-bg-pattern{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle at 70% 50%,rgba(198,161,91,0.12) 0%,transparent 60%),radial-gradient(circle at 15% 80%,rgba(198,161,91,0.07) 0%,transparent 40%);}
+.hero-grid-lines{position:absolute;inset:0;pointer-events:none;opacity:0.04;background-image:linear-gradient(var(--ink) 1px,transparent 1px),linear-gradient(90deg,var(--ink) 1px,transparent 1px);background-size:60px 60px;}
+.hero-content{position:relative;z-index:2;max-width:min(700px,100%);}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:1.5rem;}
+.hero-eyebrow span{font-size:0.68rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);}
+.hero-eyebrow:before{content:'';width:28px;height:1px;background:var(--gold);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5.5vw,5rem);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:1.5rem;}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.hero h1 strong{font-weight:700;}
+.hero-sub{font-size:clamp(0.9rem,1.5vw,1rem);font-weight:300;line-height:1.75;color:var(--muted);max-width:520px;margin-bottom:2rem;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.hero-visual{position:absolute;right:clamp(-2%,-2%,-2%);top:50%;transform:translateY(-50%);width:42%;max-width:520px;pointer-events:none;}
+@media(max-width:1100px){.hero-visual{display:none;}.hero{justify-content:center;text-align:center;}.hero-sub,.hero-actions{margin-left:auto;margin-right:auto;}.hero-actions{justify-content:center;}.hero-eyebrow{justify-content:center;}}
+
+/* ─── BUTTONS ─── */
+.btn-primary{background:var(--ink);color:#fff;padding:12px 28px;border-radius:50px;font-weight:600;font-size:clamp(0.82rem,1.2vw,0.9rem);border:none;cursor:pointer;transition:all 0.3s;letter-spacing:0.5px;display:inline-block;text-decoration:none;}
+.btn-primary:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px);box-shadow:0 12px 24px -8px rgba(198,161,91,0.4);}
+.btn-outline{background:transparent;color:var(--ink);padding:11px 28px;border-radius:50px;font-weight:600;font-size:clamp(0.82rem,1.2vw,0.9rem);border:1.5px solid rgba(14,26,24,0.2);cursor:pointer;transition:all 0.3s;letter-spacing:0.5px;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+.btn-gold{background:var(--gold);color:var(--ink);padding:12px 28px;border-radius:50px;font-weight:600;font-size:0.9rem;border:none;cursor:pointer;transition:all 0.3s;}
+.btn-gold:hover{background:var(--ink);color:#fff;transform:translateY(-2px);}
+.btn-sm{background:var(--ink);color:#fff;padding:8px 18px;border-radius:40px;font-size:0.8rem;font-weight:600;border:none;cursor:pointer;transition:all 0.25s;letter-spacing:0.5px;}
+.btn-sm:hover{background:var(--gold);color:var(--ink);}
+
+/* ─── SECTIONS ─── */
+.section{padding:clamp(3rem,6vw,6rem) clamp(1.5rem,8%,8%);position:relative;}
+.section-alt{background:var(--stone);}
+.section-dark{background:var(--ink-soft);color:#fff;}
+.section-header{text-align:center;margin-bottom:clamp(2rem,4vw,4rem);}
+.section-eyebrow{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;line-height:1.2;color:var(--ink);}
+.section-dark .section-title{color:#fff;}
+.section-sub{font-size:clamp(0.88rem,1.4vw,1rem);color:var(--muted);max-width:560px;margin:0.8rem auto 0;line-height:1.7;}
+
+/* ─── FEATURE CARDS ─── */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(1rem,2vw,1.5rem);}
+.feature-card{background:var(--white);border-radius:var(--r);padding:clamp(1.5rem,2.5vw,2.2rem);box-shadow:var(--shadow);border:1px solid rgba(198,161,91,0.08);transition:all 0.4s cubic-bezier(0.22,1,0.36,1);position:relative;overflow:hidden;}
+.feature-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(198,161,91,0.2);}
+.feature-card:before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-lt));transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;}
+.feature-card:hover:before{transform:scaleX(1);}
+.feature-icon{width:50px;height:50px;background:var(--stone);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;}
+.feature-icon i{font-size:1.3rem;color:var(--gold);}
+.feature-card h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,1.8vw,1.4rem);font-weight:600;margin-bottom:0.7rem;color:var(--ink);}
+.feature-card p{font-size:clamp(0.82rem,1.2vw,0.9rem);line-height:1.7;color:var(--muted);}
+
+/* ─── LISTINGS GRID ─── */
+.listings-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:clamp(1.2rem,2vw,1.8rem);}
+.prop-card{background:var(--white);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(198,161,91,0.08);transition:all 0.4s cubic-bezier(0.22,1,0.36,1);cursor:pointer;}
+.prop-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.prop-img{height:210px;background-size:cover;background-position:center;position:relative;background-color:#E8DDCD;overflow:hidden;}
+.prop-img-tag{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease;}
+.prop-card:hover .prop-img-tag{transform:scale(1.05);}
+.prop-badge{position:absolute;top:12px;left:12px;z-index:1;background:var(--gold);color:var(--ink);padding:4px 12px;border-radius:40px;font-size:0.68rem;font-weight:700;letter-spacing:0.5px;}
+.prop-badge.hot{background:#FF6B4A;color:#fff;}
+.prop-badge.new{background:var(--ink);color:#fff;}
+.prop-body{padding:clamp(1.2rem,2vw,1.6rem);}
+.prop-body h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,1.8vw,1.35rem);font-weight:600;color:var(--ink);margin-bottom:0.3rem;}
+.prop-price{font-size:clamp(1.2rem,2vw,1.5rem);font-weight:800;color:var(--gold);font-family:'Cormorant Garamond',serif;margin-bottom:0.6rem;}
+.prop-details{display:flex;gap:0.8rem;margin-bottom:0.8rem;flex-wrap:wrap;}
+.prop-details span{display:flex;align-items:center;gap:4px;font-size:0.78rem;color:var(--muted);}
+.prop-details i{color:var(--gold-dk);font-size:0.75rem;}
+.prop-desc{font-size:0.84rem;line-height:1.6;color:var(--muted);margin-bottom:1rem;}
+
+/* ─── COUNTER ─── */
+.counter-section{background:var(--ink);padding:clamp(3rem,4vw,4rem) clamp(1.5rem,8%,8%);position:relative;overflow:hidden;}
+.counter-section:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(198,161,91,0.08),transparent 70%);}
+.counter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(120px,100%),1fr));gap:2rem;position:relative;z-index:1;}
+.counter-item{text-align:center;}
+.counter-num{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:700;color:var(--gold);line-height:1;}
+.counter-label{font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:0.4rem;}
+
+/* ─── PARALLAX ─── */
+.parallax-banner{position:relative;height:clamp(280px,35vw,380px);overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--ink) 0%,var(--ink-soft) 100%);}
+.parallax-inner{position:absolute;inset:-20%;background:radial-gradient(ellipse at 30% 50%,rgba(198,161,91,0.2) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(198,161,91,0.1) 0%,transparent 50%);will-change:transform;}
+.parallax-content{position:relative;z-index:2;text-align:center;padding:2rem clamp(1rem,5%,5%);}
+.parallax-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4.5vw,3.8rem);font-weight:300;color:#fff;line-height:1.2;}
+.parallax-content h2 em{color:var(--gold);font-style:italic;}
+.parallax-content p{font-size:clamp(0.88rem,1.3vw,1rem);color:rgba(255,255,255,0.6);margin:0.8rem auto;max-width:480px;}
+.parallax-content .btn-primary{margin-top:1rem;background:var(--gold);color:var(--ink);}
+
+/* ─── PROCESS STEPS ─── */
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:0;position:relative;counter-reset:step;}
+@media(min-width:600px){.process-steps:before{content:'';position:absolute;top:36px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold-lt),transparent);}}
+.step{text-align:center;padding:clamp(1.5rem,2.5vw,2rem) clamp(0.8rem,1.5vw,1.5rem);position:relative;}
+.step-num{width:68px;height:68px;border-radius:50%;background:var(--white);border:2px solid var(--gold-lt);display:flex;align-items:center;justify-content:center;margin:0 auto 1.3rem;font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--gold);box-shadow:0 8px 24px -8px rgba(198,161,91,0.3);position:relative;z-index:1;}
+.step h3{font-weight:600;font-size:0.95rem;margin-bottom:0.5rem;color:var(--ink);}
+.step p{font-size:0.83rem;color:var(--muted);line-height:1.6;}
+
+/* ─── TESTIMONIALS ─── */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(1rem,2vw,1.5rem);}
+.testimonial-card{background:var(--white);border-radius:var(--r);padding:clamp(1.5rem,2.5vw,2rem);box-shadow:var(--shadow);border:1px solid rgba(198,161,91,0.08);transition:transform 0.3s ease;position:relative;}
+.testimonial-card:hover{transform:translateY(-4px);}
+.testimonial-card:before{content:'\201C';position:absolute;top:1rem;right:1.2rem;font-size:5rem;font-family:'Cormorant Garamond',serif;color:var(--gold-lt);line-height:1;pointer-events:none;}
+.stars{display:flex;gap:3px;margin-bottom:0.8rem;}
+.stars i{color:var(--gold);font-size:0.78rem;}
+.testimonial-card p{font-size:0.9rem;line-height:1.7;color:var(--muted);margin-bottom:1.1rem;font-style:italic;}
+.testimonial-author{display:flex;align-items:center;gap:10px;}
+.testimonial-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-lt));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--ink);}
+.testimonial-author .name{font-weight:600;font-size:0.85rem;color:var(--ink);}
+.testimonial-author .role{font-size:0.73rem;color:var(--muted);}
+
+/* ─── ABOUT ─── */
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:center;}
+@media(max-width:900px){.about-split{grid-template-columns:1fr;}}
+.about-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;line-height:1.2;margin-bottom:1.2rem;}
+.about-text p{font-size:0.94rem;line-height:1.8;color:var(--muted);margin-bottom:1rem;}
+.about-metrics{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:1.5rem 0;}
+.metric{background:var(--stone);border-radius:var(--r-sm);padding:1.1rem;border-left:3px solid var(--gold);}
+.metric .val{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--gold);}
+.metric .key{font-size:0.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:2px;}
+.about-visual{background:linear-gradient(135deg,var(--ink),#2F4540);border-radius:var(--r-lg);padding:clamp(2rem,3vw,3rem);position:relative;overflow:hidden;}
+.about-visual:before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(198,161,91,0.1);}
+.about-visual-inner{position:relative;z-index:1;}
+.about-visual h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2vw,1.8rem);color:#fff;margin-bottom:1.3rem;font-weight:400;}
+.about-list{list-style:none;}
+.about-list li{display:flex;align-items:flex-start;gap:10px;padding:0.8rem 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:0.88rem;color:rgba(255,255,255,0.7);}
+.about-list li:last-child{border:none;}
+.about-list li i{color:var(--gold);margin-top:2px;flex-shrink:0;}
+.about-list li strong{color:#fff;display:block;font-size:0.83rem;margin-bottom:2px;}
+
+/* ─── TEAM ─── */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:clamp(1rem,2vw,1.5rem);margin-top:2rem;}
+.team-card{text-align:center;background:var(--white);border-radius:var(--r);padding:clamp(1.5rem,2vw,2rem) clamp(1rem,1.5vw,1.5rem);box-shadow:var(--shadow);transition:transform 0.3s;}
+.team-card:hover{transform:translateY(-4px);}
+.team-avatar{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-lt));display:flex;align-items:center;justify-content:center;margin:0 auto 0.8rem;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--ink);}
+.team-card h4{font-weight:600;color:var(--ink);margin-bottom:3px;font-size:clamp(0.9rem,1.3vw,1rem);}
+.team-card .role{font-size:0.75rem;color:var(--gold);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;}
+.team-card p{font-size:0.8rem;color:var(--muted);margin-top:0.4rem;line-height:1.5;}
+
+/* ─── CONTACT ─── */
+.contact-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(1.5rem,3vw,2.5rem);align-items:start;}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+.contact-form-wrap{background:var(--white);border-radius:var(--r-lg);padding:clamp(1.5rem,2.5vw,2.5rem);box-shadow:var(--shadow);}
+.contact-form-wrap h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2vw,1.8rem);margin-bottom:0.4rem;color:var(--ink);}
+.contact-form-wrap .sub{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem;}
+@media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+.form-group{margin-bottom:0.8rem;}
+label{display:block;font-size:0.75rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
+input,select,textarea{width:100%;padding:0.8rem 1rem;border:1.5px solid var(--stone2);border-radius:10px;background:var(--cream);font-family:'Outfit',sans-serif;font-size:0.88rem;color:var(--ink);transition:border-color 0.2s,box-shadow 0.2s;outline:none;}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,161,91,0.12);}
+textarea{resize:vertical;min-height:100px;}
+.submit-btn{width:100%;padding:0.9rem;background:var(--gold);color:var(--ink);border:none;border-radius:10px;font-family:'Outfit',sans-serif;font-weight:700;font-size:0.92rem;cursor:pointer;transition:all 0.3s;}
+.submit-btn:hover{background:var(--ink);color:#fff;transform:translateY(-2px);}
+.form-feedback{margin-top:0.8rem;padding:0.8rem 1rem;border-radius:10px;font-size:0.85rem;display:none;}
+.form-feedback.success{background:#E8F5E8;color:#2D7A2D;display:block;}
+.form-feedback.error{background:#FEE8E8;color:#B02020;display:block;}
+.contact-info{display:flex;flex-direction:column;gap:1.2rem;}
+.info-card{background:var(--white);border-radius:var(--r);padding:clamp(1.2rem,2vw,1.8rem);box-shadow:var(--shadow);}
+.info-card h4{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,1.8vw,1.25rem);margin-bottom:0.8rem;color:var(--ink);}
+.info-item{display:flex;gap:12px;margin-bottom:0.8rem;align-items:flex-start;}
+.info-icon{width:36px;height:36px;background:var(--stone);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.info-icon i{color:var(--gold);font-size:0.9rem;}
+.info-text strong{display:block;font-size:0.83rem;font-weight:600;color:var(--ink);margin-bottom:2px;}
+.info-text a,.info-text span{font-size:0.8rem;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.info-text a:hover{color:var(--gold);}
+.hours-row{display:flex;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid var(--stone2);font-size:0.78rem;}
+.hours-row:last-child{border:none;}
+.hours-row .day{color:var(--muted);}
+.hours-row .time{font-weight:600;color:var(--ink);}
+.map-wrap{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:2px solid rgba(198,161,91,0.15);}
+.map-wrap iframe{width:100%;height:240px;border:none;display:block;}
+
+/* ─── FOOTER ─── */
+.footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:clamp(2.5rem,4vw,4rem) clamp(1.5rem,8%,8%) 0;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);padding-bottom:clamp(2rem,3vw,3rem);border-bottom:1px solid rgba(255,255,255,0.08);}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.footer-top{grid-template-columns:1fr;}}
+.footer-brand p{font-size:0.85rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:260px;margin-bottom:1.2rem;}
+.social-links{display:flex;gap:8px;}
+.social-link{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);transition:all 0.25s;cursor:pointer;}
+.social-link:hover{background:var(--gold);color:var(--ink);}
+.footer-col h5{font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{padding:4px 0;font-size:0.83rem;color:rgba(255,255,255,0.5);cursor:pointer;transition:color 0.2s;}
+.footer-col ul li:hover{color:var(--gold);}
+.footer-col ul li a{color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+.footer-col ul li a:hover{color:var(--gold);}
+.footer-bottom{padding:1.2rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.8rem;}
+.footer-bottom p{font-size:0.75rem;color:rgba(255,255,255,0.3);}
+.footer-bottom-links{display:flex;gap:1.2rem;}
+.footer-bottom-links a{font-size:0.75rem;color:rgba(255,255,255,0.3);text-decoration:none;cursor:pointer;transition:color 0.2s;}
+.footer-bottom-links a:hover{color:var(--gold);}
+.footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:1.2rem;}
+.footer-logo img{height:44px;opacity:0.85;}
+.footer-logo .top{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:#fff;}
+.footer-logo .sub{font-size:0.52rem;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-top:-2px;}
+
+/* ─── SCROLL REVEAL ─── */
+.reveal{opacity:0;transform:translateY(35px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-35px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(35px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1);}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+.delay-1{transition-delay:0.1s;}.delay-2{transition-delay:0.2s;}.delay-3{transition-delay:0.3s;}.delay-4{transition-delay:0.4s;}
+
+/* ─── HERO VISUAL ─── */
+.hero-visual-card{background:var(--white);border-radius:var(--r-lg);padding:2rem;box-shadow:var(--shadow-lg);border:1px solid rgba(198,161,91,0.12);position:relative;overflow:hidden;}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.2rem;}
+.hero-stat{text-align:center;padding:1rem;background:var(--stone);border-radius:var(--r-sm);}
+.hero-stat .num{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--gold);}
+.hero-stat .lbl{font-size:0.68rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:1px;}
+
+/* ─── HERO SCROLL HINT ─── */
+.hero-scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.45;animation:float 2.5s ease-in-out infinite;cursor:pointer;}
+.hero-scroll-hint span{font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--ink);}
+.hero-scroll-hint i{font-size:0.75rem;color:var(--gold);}
+@keyframes float{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(-7px);}}
+
+/* ─── GOLD DIVIDER ─── */
+.divider{display:flex;align-items:center;gap:1rem;margin:0 clamp(1.5rem,8%,8%) 3rem;}
+.divider:before,.divider:after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-lt),transparent);}
+.divider-icon{color:var(--gold);font-size:0.72rem;}
+
+/* ─── LISTINGS CTA ─── */
+.listings-cta{margin-top:2rem;text-align:center;background:linear-gradient(135deg,var(--stone),var(--stone2));border-radius:var(--r);padding:1.5rem;display:flex;align-items:center;justify-content:center;gap:clamp(1rem,3vw,2rem);flex-wrap:wrap;}
+.listings-cta i{color:var(--gold);}
+
+/* ─── PROPERTY DETAIL PAGE ─── */
+#property-detail-page .prop-detail-hero{height:clamp(220px,40vw,420px);background-size:cover;background-position:center;position:relative;border-radius:0 0 var(--r) var(--r);overflow:hidden;}
+#property-detail-page .prop-detail-hero:after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(14,26,24,0.6) 0%,transparent 50%);}
+#property-detail-page .prop-detail-back{position:absolute;top:1.5rem;left:1.5rem;z-index:3;background:rgba(253,250,244,0.9);backdrop-filter:blur(10px);border:none;border-radius:40px;padding:8px 18px;font-weight:600;font-size:0.82rem;cursor:pointer;transition:all 0.25s;color:var(--ink);}
+#property-detail-page .prop-detail-back:hover{background:var(--gold);color:var(--ink);}
+.prop-detail-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(1.5rem,3vw,2.5rem);margin-top:clamp(1.5rem,3vw,2.5rem);}
+@media(max-width:900px){.prop-detail-grid{grid-template-columns:1fr;}}
+.prop-detail-info h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;margin-bottom:0.5rem;}
+.prop-detail-price{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--gold);margin-bottom:1rem;}
+.prop-detail-features{display:flex;gap:1.2rem;flex-wrap:wrap;margin:1rem 0;}
+.prop-detail-features span{display:flex;align-items:center;gap:6px;font-size:0.9rem;color:var(--muted);background:var(--stone);padding:6px 14px;border-radius:40px;}
+.prop-detail-features i{color:var(--gold-dk);}
+.prop-detail-desc{font-size:0.95rem;line-height:1.8;color:var(--muted);margin:1rem 0;}
+.prop-detail-amenities{margin:1.5rem 0;}
+.prop-detail-amenities h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:0.8rem;}
+.amenities-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;}
+.amenity-item{display:flex;align-items:center;gap:8px;font-size:0.85rem;color:var(--muted);}
+.amenity-item i{color:var(--gold);font-size:0.8rem;}
+.prop-detail-contact{background:var(--white);border-radius:var(--r);padding:clamp(1.5rem,2vw,2rem);box-shadow:var(--shadow);position:sticky;top:90px;}
+.prop-detail-contact h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:1rem;}
+.prop-detail-agent{display:flex;align-items:center;gap:12px;margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--stone2);}
+
+/* ─── LEGAL PAGES ─── */
+.legal-content{max-width:820px;margin:0 auto;padding:clamp(2rem,4vw,4rem) clamp(1.5rem,8%,8%);}
+.legal-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.5vw,2rem);margin:2rem 0 0.8rem;color:var(--ink);}
+.legal-content h2:first-child{margin-top:0;}
+.legal-content p,.legal-content li{font-size:0.92rem;line-height:1.8;color:var(--muted);margin-bottom:0.7rem;}
+.legal-content ul{margin-left:1.5rem;margin-bottom:1rem;}
+
+/* ─── ADMIN ─── */
+.admin-overlay{display:none;position:fixed;inset:0;background:rgba(14,26,24,0.85);backdrop-filter:blur(8px);z-index:9000;align-items:center;justify-content:center;}
+.admin-overlay.open{display:flex;}
+.admin-modal{background:var(--cream);border-radius:var(--r);padding:2rem;width:min(420px,92vw);box-shadow:var(--shadow-lg);}
+.admin-modal h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;margin-bottom:0.5rem;color:var(--ink);}
+.admin-modal .sub{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;}
+.admin-panel{display:none;position:fixed;inset:0;z-index:8000;background:var(--cream);overflow-y:auto;}
+.admin-panel.open{display:block;}
+.admin-topbar{background:var(--ink);color:#fff;padding:0 clamp(1rem,3%,3%);height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.admin-topbar h1{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:#fff;}
+.admin-topbar .admin-btn{background:rgba(255,255,255,0.1);border:none;color:#fff;padding:7px 16px;border-radius:30px;cursor:pointer;font-size:0.82rem;transition:background 0.2s;}
+.admin-topbar .admin-btn:hover{background:var(--gold);color:var(--ink);}
+.admin-topbar .admin-btn.danger{background:rgba(255,100,80,0.2);}
+.admin-topbar .admin-btn.danger:hover{background:#FF6450;color:#fff;}
+.admin-body{display:grid;grid-template-columns:220px 1fr;min-height:calc(100vh - 60px);}
+@media(max-width:700px){.admin-body{grid-template-columns:1fr;}}
+.admin-sidebar{background:var(--ink-soft);padding:1.5rem 0;}
+.admin-nav{list-style:none;}
+.admin-nav li{padding:10px 1.5rem;font-size:0.85rem;color:rgba(255,255,255,0.6);cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:8px;}
+.admin-nav li:hover,.admin-nav li.active{color:var(--gold);background:rgba(198,161,91,0.08);}
+.admin-nav li i{font-size:0.9rem;}
+.admin-content-area{padding:clamp(1.5rem,3%,2.5rem);background:var(--cream);}
+.admin-section{display:none;}
+.admin-section.active{display:block;}
+.admin-section h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;margin-bottom:1.5rem;color:var(--ink);}
+.admin-card{background:var(--white);border-radius:var(--r-sm);padding:1.5rem;box-shadow:var(--shadow);margin-bottom:1.2rem;}
+.admin-card h3{font-weight:600;font-size:0.9rem;margin-bottom:1rem;color:var(--ink);border-bottom:1px solid var(--stone2);padding-bottom:0.6rem;}
+.admin-field-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:0.8rem;}
+@media(max-width:600px){.admin-field-row{grid-template-columns:1fr;}}
+.admin-input{width:100%;padding:0.7rem 0.9rem;border:1.5px solid var(--stone2);border-radius:8px;background:var(--cream);font-family:'Outfit',sans-serif;font-size:0.85rem;color:var(--ink);outline:none;transition:border-color 0.2s;}
+.admin-input:focus{border-color:var(--gold);}
+.admin-textarea{min-height:80px;resize:vertical;}
+.admin-save-btn{background:var(--gold);color:var(--ink);border:none;padding:8px 20px;border-radius:8px;font-weight:600;font-size:0.85rem;cursor:pointer;transition:all 0.2s;}
+.admin-save-btn:hover{background:var(--ink);color:#fff;}
+.admin-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:0.72rem;font-weight:700;}
+.admin-badge.green{background:#E8F5E8;color:#2D7A2D;}
+.admin-badge.gold{background:rgba(198,161,91,0.15);color:var(--gold-dk);}
+.listings-table{width:100%;border-collapse:collapse;font-size:0.82rem;}
+.listings-table th{text-align:left;padding:8px 10px;background:var(--stone);color:var(--muted);font-weight:600;font-size:0.72rem;letter-spacing:0.5px;text-transform:uppercase;}
+.listings-table td{padding:8px 10px;border-bottom:1px solid var(--stone2);}
+.listings-table tr:hover td{background:var(--stone);}
+.listings-table .action-btn{background:none;border:1px solid var(--stone2);border-radius:6px;padding:4px 10px;cursor:pointer;font-size:0.75rem;transition:all 0.2s;margin-right:4px;}
+.listings-table .action-btn:hover{border-color:var(--gold);color:var(--gold);}
+.listings-table .action-btn.del:hover{border-color:#FF6450;color:#FF6450;}
+.ai-chat-wrap{display:flex;flex-direction:column;height:500px;background:var(--white);border-radius:var(--r-sm);overflow:hidden;box-shadow:var(--shadow);}
+.ai-messages{flex:1;overflow-y:auto;padding:1.2rem;display:flex;flex-direction:column;gap:0.8rem;}
+.ai-msg{max-width:85%;padding:0.8rem 1rem;border-radius:14px;font-size:0.85rem;line-height:1.6;}
+.ai-msg.user{background:var(--ink);color:#fff;align-self:flex-end;border-radius:14px 14px 4px 14px;}
+.ai-msg.ai{background:var(--stone);color:var(--ink);align-self:flex-start;border-radius:14px 14px 14px 4px;}
+.ai-msg.ai.loading{opacity:0.6;}
+.ai-input-row{display:flex;gap:0.5rem;padding:1rem;border-top:1px solid var(--stone2);}
+.ai-input-row input{flex:1;padding:0.7rem 1rem;border:1.5px solid var(--stone2);border-radius:30px;outline:none;font-family:'Outfit',sans-serif;font-size:0.85rem;}
+.ai-input-row input:focus{border-color:var(--gold);}
+.ai-send-btn{background:var(--gold);color:var(--ink);border:none;padding:0.7rem 1.2rem;border-radius:30px;cursor:pointer;font-weight:600;font-size:0.82rem;transition:all 0.2s;}
+.ai-send-btn:hover{background:var(--ink);color:#fff;}
+
+/* ─── ADMIN BAR (logged in) ─── */
+.admin-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--ink);color:#fff;padding:0.6rem clamp(1rem,4%,4%);display:none;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}
+.admin-bar.show{display:flex;}
+.admin-bar span{font-size:0.8rem;color:rgba(255,255,255,0.6);}
+.admin-bar-btns{display:flex;gap:0.5rem;}
+.admin-bar-btn{background:rgba(255,255,255,0.1);border:none;color:#fff;padding:5px 14px;border-radius:20px;cursor:pointer;font-size:0.78rem;transition:all 0.2s;}
+.admin-bar-btn:hover{background:var(--gold);color:var(--ink);}
+
+/* ─── MOBILE NAV ─── */
+@media(max-width:860px){
+  .nav-links{display:none;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(253,250,244,0.98);backdrop-filter:blur(20px);padding:0.8rem clamp(1rem,4%,4%);border-bottom:1px solid var(--stone2);gap:0;max-height:calc(100vh - 72px);overflow-y:auto;}
+  .nav-links.open{display:flex;}
+  .nav-links li{padding:12px 14px;border-radius:10px;font-size:0.92rem;}
+  .nav-hamburger{display:flex;}
+}
+@media(min-width:861px){.nav-hamburger{display:none!important;}}
+
+/* ─── UTILITY ─── */
+.text-center{text-align:center;}
+.mt-1{margin-top:1rem;}.mt-2{margin-top:2rem;}.mb-1{margin-bottom:1rem;}
+.page-hero-dark{background:linear-gradient(135deg,var(--ink),#2F4540);padding:clamp(3rem,5vw,5rem) clamp(1.5rem,8%,8%) clamp(2rem,4vw,4rem);position:relative;overflow:hidden;}
+.page-hero-dark:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(198,161,91,0.12),transparent 60%);pointer-events:none;}
+.page-hero-dark-inner{position:relative;z-index:1;max-width:700px;}
+.promise-section{background:linear-gradient(135deg,var(--stone),var(--stone2));border-radius:var(--r-lg);padding:clamp(2rem,3vw,3rem);margin-top:2rem;position:relative;overflow:hidden;}
+.notification{position:fixed;bottom:5rem;right:1.5rem;z-index:9999;background:var(--ink);color:#fff;padding:0.8rem 1.2rem;border-radius:12px;font-size:0.85rem;box-shadow:var(--shadow-lg);transform:translateY(100px);opacity:0;transition:all 0.4s cubic-bezier(0.22,1,0.36,1);max-width:320px;}
+.notification.show{transform:translateY(0);opacity:1;}
+.notification.success{border-left:4px solid var(--gold);}
+.notification.error{border-left:4px solid #FF6450;}
+</style>
+</head>
+<body>
+
+<!-- NOTIFICATION -->
+<div id="notification" class="notification"></div>
+
+<!-- ADMIN LOGIN OVERLAY -->
+<div id="adminLoginOverlay" class="admin-overlay">
+  <div class="admin-modal">
+    <h2>Admin Access</h2>
+    <p class="sub">Enter your credentials to access the management panel.</p>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" id="adminEmail" placeholder="admin@domain.com">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="adminPassword" placeholder="••••••••">
+    </div>
+    <div id="adminLoginError" style="color:#B02020;font-size:0.82rem;margin-bottom:0.8rem;display:none;"></div>
+    <button class="submit-btn" onclick="doAdminLogin()">Sign In</button>
+    <button onclick="closeAdminLogin()" style="width:100%;margin-top:0.8rem;background:none;border:none;color:var(--muted);cursor:pointer;font-size:0.85rem;">Cancel</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel" class="admin-panel">
+  <div class="admin-topbar">
+    <h1><i class="fas fa-crown" style="color:var(--gold);margin-right:8px;"></i>Admin Panel</h1>
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+      <button class="admin-btn" onclick="viewWebsite()"><i class="fas fa-eye"></i> View Site</button>
+      <button class="admin-btn danger" onclick="adminLogout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+  </div>
+  <div class="admin-body">
+    <div class="admin-sidebar">
+      <ul class="admin-nav" id="adminNav">
+        <li class="active" onclick="showAdminSection('dashboard')"><i class="fas fa-th-large"></i> Dashboard</li>
+        <li onclick="showAdminSection('siteSettings')"><i class="fas fa-cog"></i> Site Settings</li>
+        <li onclick="showAdminSection('listings')"><i class="fas fa-home"></i> Listings</li>
+        <li onclick="showAdminSection('team')"><i class="fas fa-users"></i> Team</li>
+        <li onclick="showAdminSection('pages')"><i class="fas fa-file"></i> Pages</li>
+        <li onclick="showAdminSection('contact')"><i class="fas fa-envelope"></i> Contact Info</li>
+        <li onclick="showAdminSection('ai')"><i class="fas fa-robot"></i> AI Assistant</li>
+      </ul>
+    </div>
+    <div class="admin-content-area">
+
+      <!-- DASHBOARD -->
+      <div id="admin-dashboard" class="admin-section active">
+        <h2>Dashboard</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:1.5rem;">
+          <div class="admin-card" style="padding:1.2rem;text-align:center;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-weight:700;" id="dash-listings-count">6</div>
+            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:600;">Listings</div>
+          </div>
+          <div class="admin-card" style="padding:1.2rem;text-align:center;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-weight:700;">3</div>
+            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:600;">Team Members</div>
+          </div>
+          <div class="admin-card" style="padding:1.2rem;text-align:center;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-weight:700;" id="dash-pages-count">7</div>
+            <div style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:600;">Pages</div>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h3>Quick Actions</h3>
+          <div style="display:flex;gap:0.8rem;flex-wrap:wrap;">
+            <button class="admin-save-btn" onclick="showAdminSection('listings')"><i class="fas fa-plus"></i> Add Listing</button>
+            <button class="admin-save-btn" style="background:var(--ink);color:#fff;" onclick="showAdminSection('pages')"><i class="fas fa-file-plus"></i> New Page</button>
+            <button class="admin-save-btn" style="background:var(--muted);color:#fff;" onclick="showAdminSection('ai')"><i class="fas fa-robot"></i> Ask AI</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SITE SETTINGS -->
+      <div id="admin-siteSettings" class="admin-section">
+        <h2>Site Settings</h2>
+        <div class="admin-card">
+          <h3>Business Information</h3>
+          <div class="admin-field-row">
+            <div><label>Company Name</label><input type="text" class="admin-input" id="set-company" value="Premium Home Management"></div>
+            <div><label>Phone</label><input type="text" class="admin-input" id="set-phone" value="020 3002 2999"></div>
+          </div>
+          <div class="admin-field-row">
+            <div><label>Email</label><input type="email" class="admin-input" id="set-email" value="info@premiumhomemgmt.co.uk"></div>
+            <div><label>Address</label><input type="text" class="admin-input" id="set-address" value="68-72 Stuart St, Luton LU1 2SW"></div>
+          </div>
+          <div class="admin-field-row">
+            <div><label>Est. Year</label><input type="text" class="admin-input" id="set-year" value="2022"></div>
+            <div><label>Areas Served</label><input type="text" class="admin-input" id="set-areas" value="Luton & Greater London"></div>
+          </div>
+          <button class="admin-save-btn" onclick="saveSiteSettings()"><i class="fas fa-save"></i> Save Settings</button>
+        </div>
+        <div class="admin-card">
+          <h3>Hero Section</h3>
+          <div class="admin-field-row">
+            <div><label>Hero Headline</label><input type="text" class="admin-input" id="set-hero-h1" value="Elevate Your Property Experience"></div>
+            <div><label>Hero Subtitle</label><input type="text" class="admin-input" id="set-hero-sub" value="Professional, considerate purchase, leasing and management"></div>
+          </div>
+          <button class="admin-save-btn" onclick="saveHeroSettings()"><i class="fas fa-save"></i> Save Hero</button>
+        </div>
+        <div class="admin-card">
+          <h3>Logo</h3>
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.8rem;">Upload a new logo image (PNG/JPG recommended).</p>
+          <input type="file" accept="image/*" onchange="handleLogoUpload(event)" class="admin-input" style="padding:0.5rem;">
+          <div id="logo-preview" style="margin-top:0.8rem;"></div>
+        </div>
+      </div>
+
+      <!-- LISTINGS ADMIN -->
+      <div id="admin-listings" class="admin-section">
+        <h2>Listings Management</h2>
+        <div class="admin-card">
+          <h3>Add New Listing</h3>
+          <div class="admin-field-row">
+            <div><label>Property Name</label><input type="text" class="admin-input" id="new-prop-name" placeholder="e.g. Oak House, Luton"></div>
+            <div><label>Price (pcm)</label><input type="text" class="admin-input" id="new-prop-price" placeholder="e.g. 2,500"></div>
+          </div>
+          <div class="admin-field-row">
+            <div><label>Bedrooms</label><input type="number" class="admin-input" id="new-prop-beds" placeholder="3" min="0"></div>
+            <div><label>Bathrooms</label><input type="number" class="admin-input" id="new-prop-baths" placeholder="2" min="0"></div>
+          </div>
+          <div class="admin-field-row">
+            <div><label>Size / Feature</label><input type="text" class="admin-input" id="new-prop-size" placeholder="e.g. 1,200 sqft"></div>
+            <div><label>Badge (Optional)</label>
+              <select class="admin-input" id="new-prop-badge">
+                <option value="">None</option>
+                <option value="featured">Featured</option>
+                <option value="hot">Hot Offer</option>
+                <option value="new">New</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-bottom:0.8rem;"><label>Description</label><textarea class="admin-input admin-textarea" id="new-prop-desc" placeholder="Describe the property..."></textarea></div>
+          <div style="margin-bottom:0.8rem;"><label>Full Listing Details</label><textarea class="admin-input admin-textarea" style="min-height:100px;" id="new-prop-full" placeholder="Full description for the listing page..."></textarea></div>
+          <div style="margin-bottom:0.8rem;"><label>Amenities (comma separated)</label><input type="text" class="admin-input" id="new-prop-amenities" placeholder="e.g. Parking, Garden, Gym, Concierge"></div>
+          <div style="margin-bottom:0.8rem;"><label>Property Image</label><input type="file" accept="image/*" class="admin-input" id="new-prop-image" style="padding:0.5rem;" onchange="previewNewPropImage(event)"></div>
+          <div id="new-prop-img-preview" style="margin-bottom:0.8rem;"></div>
+          <button class="admin-save-btn" onclick="addNewListing()"><i class="fas fa-plus"></i> Add Listing</button>
+        </div>
+        <div class="admin-card">
+          <h3>Current Listings</h3>
+          <div style="overflow-x:auto;">
+            <table class="listings-table" id="listingsAdminTable">
+              <thead><tr><th>Name</th><th>Price</th><th>Beds</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody id="listingsAdminBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEAM ADMIN -->
+      <div id="admin-team" class="admin-section">
+        <h2>Team Members</h2>
+        <div class="admin-card">
+          <h3>Add Team Member</h3>
+          <div class="admin-field-row">
+            <div><label>Full Name</label><input type="text" class="admin-input" id="new-team-name" placeholder="e.g. John Smith"></div>
+            <div><label>Role / Title</label><input type="text" class="admin-input" id="new-team-role" placeholder="e.g. Property Manager"></div>
+          </div>
+          <div style="margin-bottom:0.8rem;"><label>Bio</label><textarea class="admin-input admin-textarea" id="new-team-bio" placeholder="Short bio..."></textarea></div>
+          <button class="admin-save-btn" onclick="addTeamMember()"><i class="fas fa-user-plus"></i> Add Member</button>
+        </div>
+        <div class="admin-card">
+          <h3>Current Team</h3>
+          <div id="teamAdminList"></div>
+        </div>
+      </div>
+
+      <!-- PAGES ADMIN -->
+      <div id="admin-pages" class="admin-section">
+        <h2>Pages</h2>
+        <div class="admin-card">
+          <h3>Create New Page</h3>
+          <div class="admin-field-row">
+            <div><label>Page Title</label><input type="text" class="admin-input" id="new-page-title" placeholder="e.g. About Luton"></div>
+            <div><label>Page Type</label>
+              <select class="admin-input" id="new-page-type">
+                <option value="custom">Custom Content Page</option>
+                <option value="listing">Property Listing</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-bottom:0.8rem;"><label>Page Content</label><textarea class="admin-input admin-textarea" style="min-height:140px;" id="new-page-content" placeholder="Write the page content here..."></textarea></div>
+          <button class="admin-save-btn" onclick="createNewPage()"><i class="fas fa-file-plus"></i> Create Page</button>
+        </div>
+        <div class="admin-card">
+          <h3>Existing Pages</h3>
+          <div id="pagesAdminList"></div>
+        </div>
+      </div>
+
+      <!-- CONTACT ADMIN -->
+      <div id="admin-contact" class="admin-section">
+        <h2>Contact Information</h2>
+        <div class="admin-card">
+          <h3>Update Contact Details</h3>
+          <div class="admin-field-row">
+            <div><label>Phone</label><input type="text" class="admin-input" id="cnt-phone" value="020 3002 2999"></div>
+            <div><label>Email</label><input type="email" class="admin-input" id="cnt-email" value="info@premiumhomemgmt.co.uk"></div>
+          </div>
+          <div class="admin-field-row">
+            <div><label>Address Line 1</label><input type="text" class="admin-input" id="cnt-addr1" value="68-72 Stuart St"></div>
+            <div><label>Address Line 2</label><input type="text" class="admin-input" id="cnt-addr2" value="Luton LU1 2SW, UK"></div>
+          </div>
+          <div class="admin-field-row">
+            <div><label>Mon–Fri Hours</label><input type="text" class="admin-input" id="cnt-hours-wk" value="9:00 – 18:00"></div>
+            <div><label>Saturday Hours</label><input type="text" class="admin-input" id="cnt-hours-sat" value="By Appointment"></div>
+          </div>
+          <button class="admin-save-btn" onclick="saveContactInfo()"><i class="fas fa-save"></i> Save Contact Info</button>
+        </div>
+      </div>
+
+      <!-- AI ASSISTANT -->
+      <div id="admin-ai" class="admin-section">
+        <h2>AI Website Assistant</h2>
+        <p style="font-size:0.88rem;color:var(--muted);margin-bottom:1.2rem;">Ask the AI to help you update content, write descriptions, suggest improvements, or answer questions about your website.</p>
+        <div class="ai-chat-wrap">
+          <div class="ai-messages" id="aiMessages">
+            <div class="ai-msg ai">Hello! I'm your AI website assistant. I can help you write property descriptions, improve your content, suggest SEO improvements, answer questions about your listings, or help you plan changes to your website. What would you like to do?</div>
+          </div>
+          <div class="ai-input-row">
+            <input type="text" id="aiInput" placeholder="e.g. Write a description for a 3-bed luxury apartment in Luton..." onkeydown="if(event.key==='Enter')sendAiMessage()">
+            <button class="ai-send-btn" onclick="sendAiMessage()"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN BAR -->
+<div class="admin-bar" id="adminBar">
+  <span><i class="fas fa-shield-alt" style="color:var(--gold);margin-right:6px;"></i>Admin Mode Active</span>
+  <div class="admin-bar-btns">
+    <button class="admin-bar-btn" onclick="openAdminPanel()"><i class="fas fa-cog"></i> Open Panel</button>
+    <button class="admin-bar-btn" onclick="adminLogout()">Logout</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <a class="logo" id="logoHome">
+    <img class="logo-img" id="mainLogo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' rx='10' fill='%23C6A15B'/%3E%3Ctext x='22' y='30' text-anchor='middle' font-family='Georgia' font-size='20' font-weight='bold' fill='%230E1A18'%3EPH%3C/text%3E%3C/svg%3E" alt="Premium Home Management Logo">
+    <div class="logo-text">
+      <div class="top" id="nav-company-name">Premium Home</div>
+      <div class="sub">Management</div>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li data-page="home" class="active-page">Home</li>
+    <li data-page="about">About</li>
+    <li data-page="listings">Listings</li>
+    <li data-page="privacy">Privacy Policy</li>
+    <li data-page="contact" class="nav-cta">Contact Us</li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- BADGE STRIP -->
+<div class="badge-strip" id="badgeStrip">
+  <span><i class="fas fa-crown"></i> &nbsp;Premium Home Management</span>
+  <span><i class="fas fa-circle" style="font-size:0.35rem;"></i></span>
+  <span id="badge-areas">Luton & Greater London</span>
+  <span><i class="fas fa-circle" style="font-size:0.35rem;"></i></span>
+  <span>Trusted Since <span id="badge-year">2022</span></span>
+  <span><i class="fas fa-circle" style="font-size:0.35rem;"></i></span>
+  <span id="badge-phone">020 3002 2999</span>
+</div>
+
+<!-- ═══ HOME PAGE ═══ -->
+<div id="home-page" class="page active-page">
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span>Luxury Real Estate Experts</span></div>
+      <h1 id="hero-h1">Elevate Your<br><em>Property</em><br><strong>Experience</strong></h1>
+      <p class="hero-sub" id="hero-sub">Professional, considerate purchase, leasing and management of premium properties — tailored for discerning homeowners and tenants across Luton &amp; Greater London.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" id="heroListings">Explore Listings</button>
+        <button class="btn-outline" id="heroContact">Get in Touch &rarr;</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-card">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.2rem;">
+          <div style="width:9px;height:9px;border-radius:50%;background:var(--gold);"></div>
+          <span style="font-size:0.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">Portfolio Overview</span>
+        </div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--ink);margin-bottom:0.3rem;">£45M+</div>
+        <div style="font-size:0.8rem;color:var(--muted);margin-bottom:1.2rem;">Total lease transactions managed</div>
+        <div style="background:var(--stone);border-radius:10px;padding:0.9rem;margin-bottom:0.8rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:0.8rem;color:var(--muted);">Tenant Satisfaction</span><span style="font-weight:700;color:var(--gold);">98%</span></div>
+          <div style="height:5px;background:var(--stone2);border-radius:3px;margin-top:7px;overflow:hidden;"><div style="width:98%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:3px;"></div></div>
+        </div>
+        <div style="background:var(--stone);border-radius:10px;padding:0.9rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:0.8rem;color:var(--muted);">Portfolio Occupancy</span><span style="font-weight:700;color:var(--gold);">96%</span></div>
+          <div style="height:5px;background:var(--stone2);border-radius:3px;margin-top:7px;overflow:hidden;"><div style="width:96%;height:100%;background:linear-gradient(90deg,var(--ink),#2F4540);border-radius:3px;"></div></div>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num">450+</div><div class="lbl">Properties</div></div>
+          <div class="hero-stat"><div class="num">3+</div><div class="lbl">Years Active</div></div>
+          <div class="hero-stat"><div class="num">24hr</div><div class="lbl">Response</div></div>
+          <div class="hero-stat"><div class="num">98%</div><div class="lbl">Satisfied</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" onclick="document.getElementById('why-section').scrollIntoView({behavior:'smooth'})">
+      <span>Scroll</span><i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="section" id="why-section">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Why Choose Us</div>
+      <h2 class="section-title">Excellence in Every Detail</h2>
+      <p class="section-sub">Over two years of white-glove property services combining local expertise with transparent, ethical practice.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal delay-1"><div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>Trusted Since 2022</h3><p>Excellence in property management and client-first service across Luton &amp; Greater London. A reputation built on results and relationships.</p></div>
+      <div class="feature-card reveal delay-2"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>98% Satisfaction Rate</h3><p>Seamless solutions and highly responsive care create lasting landlord-tenant relationships with industry-leading retention scores.</p></div>
+      <div class="feature-card reveal delay-3"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h3>Full Legal Compliance</h3><p>Every lease, deposit, and regulation handled with meticulous professionalism — always in step with the latest UK housing legislation.</p></div>
+      <div class="feature-card reveal delay-4"><div class="feature-icon"><i class="fas fa-key"></i></div><h3>Bespoke Portfolio</h3><p>From penthouses to family homes — curated listings for refined living, all under full professional management.</p></div>
+      <div class="feature-card reveal delay-2"><div class="feature-icon"><i class="fas fa-tools"></i></div><h3>24hr Maintenance</h3><p>Rapid-response maintenance team available around the clock. Issues logged, assigned and resolved — keeping your property pristine.</p></div>
+      <div class="feature-card reveal delay-3"><div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div><h3>Deep Local Knowledge</h3><p>Embedded expertise across Luton, Bedfordshire, Hertfordshire, and London suburbs — maximum value through local intelligence.</p></div>
+    </div>
+  </section>
+
+  <!-- COUNTER -->
+  <div class="counter-section">
+    <div class="counter-grid">
+      <div class="counter-item reveal"><div class="counter-num" data-target="450">0</div><div class="counter-label">Properties Managed</div></div>
+      <div class="counter-item reveal delay-1"><div class="counter-num" data-target="45" data-prefix="£" data-suffix="M+">0</div><div class="counter-label">Lease Transactions</div></div>
+      <div class="counter-item reveal delay-2"><div class="counter-num" data-target="98" data-suffix="%">0</div><div class="counter-label">Tenant Satisfaction</div></div>
+      <div class="counter-item reveal delay-3"><div class="counter-num" data-target="3" data-suffix="+">0</div><div class="counter-label">Years of Excellence</div></div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">The Process</div>
+      <h2 class="section-title">Four Steps to Your Perfect Property</h2>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal delay-1"><div class="step-num">1</div><h3>Consultation</h3><p>We listen first. Understanding your goals, lifestyle, and budget to tailor our search precisely.</p></div>
+      <div class="step reveal delay-2"><div class="step-num">2</div><h3>Property Match</h3><p>Our curated portfolio and off-market access ensures we find exceptional properties others miss.</p></div>
+      <div class="step reveal delay-3"><div class="step-num">3</div><h3>Legal &amp; Finance</h3><p>Complete compliance, contracts, and financial structuring handled with meticulous precision.</p></div>
+      <div class="step reveal delay-4"><div class="step-num">4</div><h3>Ongoing Management</h3><p>White-glove property management, maintenance, and tenancy support — so you never worry.</p></div>
+    </div>
+  </section>
+
+  <!-- FEATURED LISTINGS -->
+  <section class="section">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Featured Properties</div>
+      <h2 class="section-title">Popular Listings For Sale &amp; Rent</h2>
+      <p class="section-sub">Handpicked premium homes with full management included. Each listing offers modern amenities and prime locations.</p>
+    </div>
+    <div class="listings-grid" id="homeFeaturedListings"></div>
+    <div class="text-center mt-2 reveal">
+      <button class="btn-primary" onclick="switchPage('listings')" style="font-size:1rem;padding:14px 36px;">View All Listings &rarr;</button>
+    </div>
+  </section>
+
+  <!-- PARALLAX -->
+  <div class="parallax-banner" id="parallax1">
+    <div class="parallax-inner" id="parallaxInner1"></div>
+    <div class="parallax-content reveal">
+      <h2>Your Dream Property<br>Awaits <em>Discovery</em></h2>
+      <p>Browse our exclusive listings — premium homes and apartments with full management included.</p>
+      <button class="btn-primary" onclick="switchPage('listings')">View All Listings &rarr;</button>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Client Stories</div>
+      <h2 class="section-title">What Our Clients Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal delay-1"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Premium Home found me the perfect apartment within a week. Their attention to detail is truly unmatched."</p><div class="testimonial-author"><div class="testimonial-avatar">S</div><div><div class="name">Sarah M.</div><div class="role">Tenant, Luton</div></div></div></div>
+      <div class="testimonial-card reveal delay-2"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"As a landlord, they maximised my rental income while keeping everything completely stress-free."</p><div class="testimonial-author"><div class="testimonial-avatar">D</div><div><div class="name">David K.</div><div class="role">Landlord, Hertfordshire</div></div></div></div>
+      <div class="testimonial-card reveal delay-3"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"The team guided us through every step of our property purchase with professionalism and genuine care."</p><div class="testimonial-author"><div class="testimonial-avatar">A</div><div><div class="name">Amira T.</div><div class="role">Buyer, London</div></div></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ ABOUT PAGE ═══ -->
+<div id="about-page" class="page">
+  <div class="page-hero-dark">
+    <div class="page-hero-dark-inner">
+      <div class="section-eyebrow" style="color:var(--gold-lt);">About Us</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,4rem);font-weight:300;color:#fff;line-height:1.2;margin-top:0.5rem;">Redefining <em style="color:var(--gold);">Premium</em><br>Property Management</h1>
+    </div>
+  </div>
+  <section class="section">
+    <div class="about-split">
+      <div class="about-text reveal-left">
+        <div class="section-eyebrow">Our Story</div>
+        <h2 class="section-title">Experts in Premium Property</h2>
+        <p>Our area of expertise is the professional and considerate purchase, leasing, and management of real estate. We offer seamless solutions customised to meet your needs — whether you're a tenant looking for a superior home or a homeowner seeking to maximise your investment.</p>
+        <p>Founded in 2022, we blend luxury with practicality. Every property we manage receives white-glove treatment, combining deep local market intelligence, ethical leasing practices, and genuinely transparent communication.</p>
+        <div class="about-metrics">
+          <div class="metric"><div class="val">450+</div><div class="key">Properties Managed</div></div>
+          <div class="metric"><div class="val">£45M+</div><div class="key">Lease Transactions</div></div>
+          <div class="metric"><div class="val">100%</div><div class="key">Client Retention</div></div>
+          <div class="metric"><div class="val">3yrs</div><div class="key">Trusted Experience</div></div>
+        </div>
+        <button class="btn-primary" onclick="switchPage('contact')">Work With Us &rarr;</button>
+      </div>
+      <div class="about-visual reveal-right">
+        <div class="about-visual-inner">
+          <h3>Our Commitment to You</h3>
+          <ul class="about-list">
+            <li><i class="fas fa-check"></i><div><strong>Transparent Communication</strong>Always clear, honest, and proactive in every interaction.</div></li>
+            <li><i class="fas fa-check"></i><div><strong>Full Legal Compliance</strong>Every contract, deposit, and regulation handled with precision.</div></li>
+            <li><i class="fas fa-check"></i><div><strong>24hr Emergency Support</strong>Round-the-clock response for maintenance and urgent issues.</div></li>
+            <li><i class="fas fa-check"></i><div><strong>Maximised Returns</strong>Strategic pricing and management to optimise your rental yield.</div></li>
+            <li><i class="fas fa-check"></i><div><strong>Local Market Expertise</strong>Bedfordshire, Hertfordshire &amp; London — deep roots, real results.</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="promise-section reveal">
+      <div class="section-eyebrow">Our Promise</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,1.8rem);margin:0.5rem 0 0.8rem;color:var(--ink);">Tailored Strategy for Every Client</h3>
+      <p style="font-size:0.93rem;line-height:1.8;color:var(--muted);max-width:700px;">Every client — from first-time renter to seasoned investor — receives a tailored strategy. We pride ourselves on integrity, speed, and an unwavering commitment to excellence. Headquartered at 68-72 Stuart St, Luton, we have deep ties to Bedfordshire and surrounding areas.</p>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Our Team</div>
+      <h2 class="section-title">The People Behind the Service</h2>
+      <p class="section-sub">Experienced professionals dedicated to delivering exceptional property management outcomes.</p>
+    </div>
+    <div class="team-grid" id="teamGrid"></div>
+  </section>
+  <div class="parallax-banner" id="parallax2">
+    <div class="parallax-inner" id="parallaxInner2"></div>
+    <div class="parallax-content reveal">
+      <h2>A Partner You Can <em>Trust</em></h2>
+      <p>From your first inquiry to ongoing management — we're with you at every step.</p>
+      <button class="btn-primary" onclick="switchPage('contact')">Get in Touch Today</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LISTINGS PAGE ═══ -->
+<div id="listings-page" class="page">
+  <div style="background:linear-gradient(135deg,var(--stone),var(--stone2));padding:clamp(3rem,5vw,4rem) clamp(1.5rem,8%,8%) clamp(2rem,3vw,3rem);">
+    <div class="reveal">
+      <div class="section-eyebrow">Our Portfolio</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:400;color:var(--ink);margin-top:0.5rem;">Premium Featured <em style="color:var(--gold);font-style:italic;">Listings</em></h1>
+      <p style="font-size:clamp(0.88rem,1.4vw,1rem);color:var(--muted);max-width:560px;margin-top:0.7rem;line-height:1.7;">Discover exquisite homes &amp; apartments with full management included.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="listings-grid" id="allListingsGrid"></div>
+    <div class="listings-cta reveal" style="margin-top:2rem;">
+      <i class="fas fa-phone-alt fa-lg"></i>
+      <div><strong style="display:block;font-size:0.95rem;margin-bottom:3px;">Private Viewings Available</strong><span style="font-size:0.82rem;color:var(--muted);">Call our specialist leasing team to arrange an exclusive visit</span></div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--gold);">020 3002 2999</div>
+      <button class="btn-primary" onclick="switchPage('contact')">Send an Inquiry</button>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ PROPERTY DETAIL PAGE ═══ -->
+<div id="property-detail-page" class="page">
+  <div id="propDetailHero" class="prop-detail-hero">
+    <button class="prop-detail-back" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back</button>
+    <div id="propDetailBadge" style="position:absolute;bottom:1.5rem;left:1.5rem;z-index:3;"></div>
+  </div>
+  <section class="section" style="padding-top:1.5rem;">
+    <div class="prop-detail-grid">
+      <div class="prop-detail-info" id="propDetailInfo"></div>
+      <div class="prop-detail-contact" id="propDetailContact"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ CONTACT PAGE ═══ -->
+<div id="contact-page" class="page">
+  <div class="page-hero-dark">
+    <div class="page-hero-dark-inner reveal">
+      <div class="section-eyebrow" style="color:var(--gold-lt);">Let's Talk</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,4rem);font-weight:300;color:#fff;margin-top:0.5rem;">Get in <em style="color:var(--gold);">Touch</em></h1>
+      <p style="font-size:clamp(0.88rem,1.3vw,1rem);color:rgba(255,255,255,0.55);max-width:520px;margin-top:0.7rem;line-height:1.7;">Whether you're looking to rent, let, or invest — our team is ready to help with expert guidance and a personal touch.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="contact-grid">
+      <div class="contact-form-wrap reveal-left">
+        <h3>Property Inquiry</h3>
+        <p class="sub">Complete the form below and a specialist will respond within 24 hours.</p>
+        <form id="inquiryForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input type="text" id="fullName" placeholder="Your full name" required></div>
+            <div class="form-group"><label>Email Address *</label><input type="email" id="emailAddr" placeholder="hello@domain.com" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone Number</label><input type="tel" id="phoneNum" placeholder="020 3002 2999"></div>
+            <div class="form-group"><label>Inquiry Type</label>
+              <select id="inquiryType">
+                <option>I'm Looking to Rent</option>
+                <option>I'm a Landlord</option>
+                <option>I Want to Buy</option>
+                <option>General Question</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Preferred Property</label><select id="propertySelect"></select></div>
+          <div class="form-group"><label>Budget Range</label>
+            <select>
+              <option>Under £1,500 pcm</option>
+              <option>£1,500 – £2,500 pcm</option>
+              <option>£2,500 – £4,000 pcm</option>
+              <option>£4,000+ pcm</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message &amp; Requirements</label><textarea id="messageText" placeholder="Tell us about your ideal timeline, specific requirements or any questions..."></textarea></div>
+          <button type="submit" class="submit-btn">Send Premium Inquiry &nbsp;<i class="fas fa-arrow-right"></i></button>
+          <div id="formFeedback" class="form-feedback"></div>
+        </form>
+      </div>
+      <div class="contact-info">
+        <div class="info-card reveal delay-1">
+          <h4>Our Office</h4>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-text"><strong>Phone</strong><a href="tel:02030022999" id="cnt-display-phone">020 3002 2999</a></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-text"><strong>Address</strong><a href="https://maps.google.com/?q=68-72+Stuart+St,+Luton+LU1+2SW" target="_blank" id="cnt-display-addr">68-72 Stuart St, Luton LU1 2SW, UK</a></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+            <div class="info-text"><strong>Email</strong><a href="mailto:info@premiumhomemgmt.co.uk" id="cnt-display-email">info@premiumhomemgmt.co.uk</a></div>
+          </div>
+        </div>
+        <div class="info-card reveal delay-2">
+          <h4>Opening Hours</h4>
+          <div class="hours-row"><span class="day">Monday – Friday</span><span class="time" id="cnt-display-hours-wk">9:00 – 18:00</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span class="time" id="cnt-display-hours-sat">By Appointment</span></div>
+          <div class="hours-row"><span class="day">Sunday</span><span class="time">Closed</span></div>
+          <div style="margin-top:0.8rem;padding:0.7rem;background:rgba(198,161,91,0.08);border-radius:9px;font-size:0.8rem;color:var(--muted);border-left:3px solid var(--gold);">
+            <i class="fas fa-info-circle" style="color:var(--gold);margin-right:5px;"></i>24hr emergency maintenance for managed properties
+          </div>
+        </div>
+        <div class="map-wrap reveal delay-3">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2458.279631369466!2d-0.4173946846334464!3d51.87997797969188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764e5a5b4b4b4b%3A0x2b2b2b2b2b2b2b2b!2s68-72%20Stuart%20St%2C%20Luton%20LU1%202SW%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" allowfullscreen loading="lazy" title="Our Office Location"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══ PRIVACY POLICY PAGE ═══ -->
+<div id="privacy-page" class="page">
+  <div class="page-hero-dark">
+    <div class="page-hero-dark-inner"><div class="section-eyebrow" style="color:var(--gold-lt);">Legal</div><h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:300;color:#fff;margin-top:0.5rem;">Privacy <em style="color:var(--gold);">Policy</em></h1></div>
+  </div>
+  <div class="legal-content">
+    <h2>1. Introduction</h2><p>Premium Home Management Ltd ("we", "our", "us") is committed to protecting and respecting your privacy. This policy sets out the basis on which any personal data we collect from you, or that you provide to us, will be processed by us.</p>
+    <h2>2. Information We Collect</h2><p>We may collect and process the following data about you:</p><ul><li>Information you provide by filling in forms on our site, including name, email address, phone number, and property preferences.</li><li>Records of correspondence if you contact us.</li><li>Details of your visits to our website and the resources you access.</li></ul>
+    <h2>3. How We Use Your Information</h2><p>We use information held about you in the following ways:</p><ul><li>To provide you with property listings, valuations and related services.</li><li>To contact you about properties that may be of interest to you.</li><li>To notify you about changes to our service.</li><li>To comply with our legal obligations.</li></ul>
+    <h2>4. Disclosure of Your Information</h2><p>We may share your personal information with selected third parties including business partners, suppliers and sub-contractors for the performance of any contract we enter into with you. We will not sell your data to third parties for marketing purposes.</p>
+    <h2>5. Data Retention</h2><p>We retain your personal data for as long as necessary to provide our services and comply with our legal obligations. Typically this is no longer than 7 years.</p>
+    <h2>6. Your Rights</h2><p>You have the right to access, correct, or delete your personal data. To exercise these rights, please contact us at <a href="mailto:info@premiumhomemgmt.co.uk" style="color:var(--gold);">info@premiumhomemgmt.co.uk</a>.</p>
+    <h2>7. Cookies</h2><p>Our website uses cookies. Please see our Cookie Policy for details.</p>
+    <h2>8. Contact Us</h2><p>Questions about this policy should be sent to <a href="mailto:info@premiumhomemgmt.co.uk" style="color:var(--gold);">info@premiumhomemgmt.co.uk</a> or by post to 68-72 Stuart St, Luton LU1 2SW.</p>
+    <p style="margin-top:2rem;font-size:0.8rem;color:var(--muted);">Last updated: January 2025</p>
+  </div>
+</div>
+
+<!-- ═══ TERMS OF SERVICE PAGE ═══ -->
+<div id="terms-page" class="page">
+  <div class="page-hero-dark">
+    <div class="page-hero-dark-inner"><div class="section-eyebrow" style="color:var(--gold-lt);">Legal</div><h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:300;color:#fff;margin-top:0.5rem;">Terms of <em style="color:var(--gold);">Service</em></h1></div>
+  </div>
+  <div class="legal-content">
+    <h2>1. Acceptance of Terms</h2><p>By accessing and using the services of Premium Home Management Ltd, you accept and agree to be bound by the terms and provisions of this agreement.</p>
+    <h2>2. Services Provided</h2><p>Premium Home Management Ltd provides property management, lettings, and related real estate services. We act as agents between landlords and tenants and do not own the properties we manage unless specifically stated.</p>
+    <h2>3. User Responsibilities</h2><p>You agree to:</p><ul><li>Provide accurate and truthful information when using our services.</li><li>Not use our services for any unlawful purpose.</li><li>Comply with all applicable UK laws and regulations regarding tenancy.</li></ul>
+    <h2>4. Fees and Payment</h2><p>All fees are as agreed in individual service agreements. Management fees are typically charged as a percentage of monthly rent. Full details are provided before any service commences.</p>
+    <h2>5. Limitation of Liability</h2><p>To the fullest extent permitted by law, Premium Home Management Ltd shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.</p>
+    <h2>6. Governing Law</h2><p>These terms shall be governed by and construed in accordance with the laws of England and Wales.</p>
+    <h2>7. Changes to Terms</h2><p>We reserve the right to update these terms at any time. Continued use of our services after changes constitutes acceptance of the new terms.</p>
+    <h2>8. Contact</h2><p>For any questions regarding these terms, contact us at <a href="mailto:info@premiumhomemgmt.co.uk" style="color:var(--gold);">info@premiumhomemgmt.co.uk</a>.</p>
+    <p style="margin-top:2rem;font-size:0.8rem;color:var(--muted);">Last updated: January 2025</p>
+  </div>
+</div>
+
+<!-- ═══ COOKIE POLICY PAGE ═══ -->
+<div id="cookies-page" class="page">
+  <div class="page-hero-dark">
+    <div class="page-hero-dark-inner"><div class="section-eyebrow" style="color:var(--gold-lt);">Legal</div><h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:300;color:#fff;margin-top:0.5rem;">Cookie <em style="color:var(--gold);">Policy</em></h1></div>
+  </div>
+  <div class="legal-content">
+    <h2>1. What Are Cookies?</h2><p>Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better experience by enabling us to monitor which pages you find useful and which you do not.</p>
+    <h2>2. Types of Cookies We Use</h2><ul><li><strong>Essential cookies:</strong> Required for the website to function properly.</li><li><strong>Performance cookies:</strong> Help us understand how visitors interact with our website.</li><li><strong>Functionality cookies:</strong> Allow the website to remember choices you make.</li><li><strong>Targeting cookies:</strong> May be set by our advertising partners.</li></ul>
+    <h2>3. Managing Cookies</h2><p>You can control and/or delete cookies at any time. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. However, if you do this, you may have to manually adjust some preferences every time you visit a site.</p>
+    <h2>4. Third-Party Cookies</h2><p>We use Google Maps on our contact page, which may set its own cookies. Please refer to Google's privacy policy for information about their cookie usage.</p>
+    <h2>5. Contact Us</h2><p>If you have any questions about our use of cookies, please contact us at <a href="mailto:info@premiumhomemgmt.co.uk" style="color:var(--gold);">info@premiumhomemgmt.co.uk</a>.</p>
+    <p style="margin-top:2rem;font-size:0.8rem;color:var(--muted);">Last updated: January 2025</p>
+  </div>
+</div>
+
+<!-- ═══ DYNAMIC CUSTOM PAGES CONTAINER ═══ -->
+<div id="custom-pages-container"></div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img id="footerLogo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' rx='10' fill='%23C6A15B'/%3E%3Ctext x='22' y='30' text-anchor='middle' font-family='Georgia' font-size='20' font-weight='bold' fill='%230E1A18'%3EPH%3C/text%3E%3C/svg%3E" alt="Premium Home Management">
+        <div><div class="top" id="footer-company-name">Premium Home</div><div class="sub">Management</div></div>
+      </div>
+      <p>Professional &amp; considerate purchase, leasing and management of premium real estate across Luton, Bedfordshire, Hertfordshire and Greater London.</p>
+      <div class="social-links">
+        <div class="social-link"><i class="fab fa-facebook-f"></i></div>
+        <div class="social-link"><i class="fab fa-instagram"></i></div>
+        <div class="social-link"><i class="fab fa-linkedin-in"></i></div>
+        <div class="social-link"><i class="fab fa-x-twitter"></i></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <ul>
+        <li onclick="switchPage('home')">Home</li>
+        <li onclick="switchPage('about')">About Us</li>
+        <li onclick="switchPage('listings')">Listings</li>
+        <li onclick="switchPage('contact')">Contact</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li onclick="switchPage('privacy')">Privacy Policy</li>
+        <li onclick="switchPage('terms')">Terms of Service</li>
+        <li onclick="switchPage('cookies')">Cookie Policy</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><i class="fas fa-phone" style="color:var(--gold);margin-right:5px;"></i><a href="tel:02030022999" id="footer-phone" style="color:rgba(255,255,255,0.5);text-decoration:none;">020 3002 2999</a></li>
+        <li><i class="fas fa-envelope" style="color:var(--gold);margin-right:5px;"></i><a href="mailto:info@premiumhomemgmt.co.uk" id="footer-email" style="color:rgba(255,255,255,0.5);text-decoration:none;">info@premiumhomemgmt.co.uk</a></li>
+        <li><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:5px;"></i><a href="https://maps.google.com/?q=68-72+Stuart+St,+Luton+LU1+2SW" target="_blank" id="footer-addr" style="color:rgba(255,255,255,0.5);text-decoration:none;">68-72 Stuart St, Luton</a></li>
+        <li><i class="fas fa-clock" style="color:var(--gold);margin-right:5px;"></i><span style="color:rgba(255,255,255,0.5);">Mon–Fri 9:00–18:00</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="footer-year">2025</span> Premium Home Management Ltd. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a onclick="switchPage('privacy')">Privacy Policy</a>
+      <a onclick="switchPage('terms')">Terms of Service</a>
+      <a onclick="switchPage('cookies')">Cookie Policy</a>
+      <a onclick="openAdminLoginFromFooter()" style="color:rgba(255,255,255,0.15);">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ═══ DATA STORE ═══
+let siteData = {
+  company: "Premium Home Management",
+  phone: "020 3002 2999",
+  email: "info@premiumhomemgmt.co.uk",
+  address: "68-72 Stuart St, Luton LU1 2SW, UK",
+  year: "2022",
+  areas: "Luton & Greater London",
+  heroH1: "Elevate Your Property Experience",
+  heroSub: "Professional, considerate purchase, leasing and management of premium properties — tailored for discerning homeowners and tenants across Luton & Greater London.",
+  hoursWk: "9:00 – 18:00",
+  hoursSat: "By Appointment"
+};
+
+let listings = [
+  {id:1,name:"Stuart Grand Residence",price:"3,250",beds:3,baths:2,size:"1,530 sqft",badge:"featured",desc:"Iconic Luton location, soaring ceilings, private balcony, concierge service and secure underground parking.",fullDesc:"An iconic residence set in the heart of Luton. Features soaring ceilings with bespoke cornicing, a wraparound private balcony with city views, and premium concierge service. The property boasts an open-plan kitchen/living space with premium appliances, three generously proportioned bedrooms with built-in storage, two en-suite bathrooms, and secure underground parking for two vehicles.",amenities:["Private Balcony","Concierge Service","Underground Parking","Smart Home System","Air Conditioning","Video Entry"],img:"https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",imgBg:"linear-gradient(135deg,#E3D5C0,#C6A15B)"},
+  {id:2,name:"The Pinnacle Apartment",price:"2,495",beds:2,baths:2,size:"980 sqft",badge:"hot",desc:"Panoramic city views, rooftop terrace, smart home technology, pet-friendly building with concierge.",fullDesc:"Perched above the city, The Pinnacle offers breathtaking panoramic views from floor-to-ceiling windows. The open plan living area flows onto an expansive rooftop terrace — perfect for entertaining. Two double bedrooms, two bathrooms with rainfall showers, fully-integrated Siemens kitchen, and cutting-edge smart home technology throughout.",amenities:["Rooftop Terrace","Pet Friendly","Gym Access","Bike Storage","24hr Concierge","EV Charging"],img:"https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",imgBg:"linear-gradient(135deg,#DCCFBB,#C6A15B)"},
+  {id:3,name:"Willow Manor House",price:"4,250",beds:4,baths:3,size:"2,100 sqft",badge:"",desc:"Stunning family home with landscaped garden, dedicated home office, and outstanding school catchment area.",fullDesc:"Willow Manor House is a beautifully appointed family home set in a quiet, highly desirable cul-de-sac. The property features four double bedrooms, a master suite with walk-in wardrobe and en-suite, a bespoke fitted kitchen with island, spacious open-plan reception, a dedicated home office, and a magnificent landscaped rear garden with a terrace perfect for alfresco dining.",amenities:["Private Garden","Home Office","Garage + Driveway","New Kitchen","Underfloor Heating","Top School Catchment"],img:"https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",imgBg:"linear-gradient(135deg,#D6C9B5,#C6A15B)"},
+  {id:4,name:"Luton Central Loft",price:"2,050",beds:1,baths:1,size:"650 sqft",badge:"",desc:"Designer interior, exposed brick feature walls — walking distance to train station and the best independent shops.",fullDesc:"A stunning conversion loft apartment in Luton town centre. The property showcases original exposed brick walls, polished concrete floors, and industrial-chic fixtures. The large open plan living and kitchen space benefits from a wall of windows flooding the room with natural light. Steps from Luton train station for easy London access.",amenities:["Exposed Brick","High Ceilings","Train Station: 3 min walk","Roof Light Windows","Integrated Appliances","Secure Entry"],img:"https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",imgBg:"linear-gradient(135deg,#E8DDCD,#C6A15B)"},
+  {id:5,name:"Park Villa Residences",price:"3,900",beds:3,baths:2,size:"1,680 sqft",badge:"new",desc:"En-suite bedrooms, sleek modern kitchen, moments from parkland. The ideal family retreat.",fullDesc:"Park Villa Residences is a newly completed collection of luxury homes adjacent to a beautiful nature reserve. Each home is finished to an exceptional standard with Porcelanosa tiling, Quooker boiling water taps, integrated Miele appliances, and automated smart lighting. Three bedrooms each with en-suite, a private landscaped garden and driveway parking.",amenities:["Miele Appliances","Smart Lighting","Private Garden","Driveway Parking","Park Views","NHBC Warranty"],img:"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80",imgBg:"linear-gradient(135deg,#E1D4C2,#C6A15B)"},
+  {id:6,name:"The Charterhouse",price:"5,200",beds:5,baths:4,size:"3,400 sqft",badge:"",desc:"Exquisite 5-bed executive home with cinema room and landscaped gardens. Unrivalled elegance in a secure gated community.",fullDesc:"The Charterhouse is one of the most prestigious executive homes available in the region. Set within an exclusive gated development, this five-bedroom mansion features a dedicated home cinema, indoor swimming pool, a chef's kitchen, wine cellar, and a triple garage. The landscaped grounds are maintained by a professional gardening team. This is the pinnacle of luxury living.",amenities:["Indoor Pool","Home Cinema","Triple Garage","Wine Cellar","Gated Security","Staff Accommodation"],img:"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80",imgBg:"linear-gradient(135deg,#D9CBB8,#C6A15B)"}
+];
+
+let teamMembers = [
+  {name:"Sohail Qureshi",role:"Managing Director",bio:"Specialist in Luton and London suburb markets with extensive property management experience."},
+  {name:"Rizwan Sajid",role:"Head of Lettings",bio:"ARLA qualified lettings expert with an exceptional eye for property value and client care."},
+  {name:"Zar Ali Khan",role:"Property Manager",bio:"Ensuring every managed property meets the highest standards, every day, for every client."}
+];
+
+let customPages = [];
+let isAdmin = false;
+let prevPage = 'home';
+const ADMIN_EMAIL = 'AAnsari100@outlook.com';
+const ADMIN_PASS = 'Hounslow1!';
+
+// ═══ PAGE SYSTEM ═══
+const allPages = ['home','about','listings','property-detail','contact','privacy','terms','cookies'];
+
+function switchPage(id) {
+  if(id !== 'property-detail') prevPage = id;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page','page-enter'));
+  const target = document.getElementById(id+'-page');
+  if(!target) return;
+  target.classList.add('active-page');
+  void target.offsetWidth;
+  target.classList.add('page-enter');
+  document.querySelectorAll('[data-page]').forEach(el => {
+    el.classList.toggle('active-page', el.getAttribute('data-page') === id);
+  });
+  window.scrollTo({top:0, behavior:'smooth'});
+  setTimeout(() => initReveal(), 80);
+  if(id === 'home') { startCounters(); renderHomeFeatured(); }
+  if(id === 'listings') renderAllListings();
+  if(id === 'about') renderTeam();
+  if(id === 'contact') updateContactDisplay();
+  updatePropertySelect();
+}
+
+function goBack() { switchPage(prevPage || 'listings'); }
+
+// ═══ NAV ═══
+document.querySelectorAll('#navLinks li[data-page]').forEach(li => {
+  li.addEventListener('click', () => { const p = li.getAttribute('data-page'); if(p) switchPage(p); closeMenu(); });
+});
+document.getElementById('logoHome').addEventListener('click', () => switchPage('home'));
+document.getElementById('heroListings')?.addEventListener('click', () => switchPage('listings'));
+document.getElementById('heroContact')?.addEventListener('click', () => switchPage('contact'));
+
+const ham = document.getElementById('hamburger');
+ham.addEventListener('click', toggleMenu);
+function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); ham.classList.toggle('open'); }
+function closeMenu() { document.getElementById('navLinks').classList.remove('open'); ham.classList.remove('open'); }
+
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  handleParallax();
+});
+
+// ═══ PARALLAX ═══
+function handleParallax() {
+  [['parallax1','parallaxInner1'],['parallax2','parallaxInner2']].forEach(([wid,iid]) => {
+    const w = document.getElementById(wid), inn = document.getElementById(iid);
+    if(!w||!inn) return;
+    const rect = w.getBoundingClientRect(), vh = window.innerHeight;
+    if(rect.top < vh && rect.bottom > 0) {
+      const p = (vh - rect.top)/(vh + rect.height);
+      inn.style.transform = `translateY(${((p-0.5)*40).toFixed(1)}px)`;
+    }
+  });
+}
+
+// ═══ REVEAL ═══
+function initReveal() {
+  const els = document.querySelectorAll('.active-page .reveal, .active-page .reveal-left, .active-page .reveal-right');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }});
+  }, {threshold:0.1, rootMargin:'0px 0px -30px 0px'});
+  els.forEach(el => { el.classList.remove('visible'); io.observe(el); });
+}
+initReveal();
+
+// ═══ COUNTERS ═══
+let countersStarted = false;
+function startCounters() {
+  if(countersStarted) return; countersStarted = true;
+  document.querySelectorAll('.counter-num').forEach(el => {
+    const target = +el.getAttribute('data-target');
+    const pre = el.getAttribute('data-prefix')||'';
+    const suf = el.getAttribute('data-suffix')||'';
+    let cur = 0; const step = Math.ceil(target/60);
+    const id = setInterval(() => { cur = Math.min(cur+step, target); el.textContent = pre+cur+suf; if(cur>=target) clearInterval(id); }, 22);
+  });
+}
+const cio = new IntersectionObserver(e => { if(e[0].isIntersecting) startCounters(); }, {threshold:0.3});
+const cs = document.querySelector('.counter-section');
+if(cs) cio.observe(cs);
+
+// ═══ RENDER LISTINGS ═══
+function getBadgeHTML(badge) {
+  if(!badge) return '';
+  const cls = badge === 'hot' ? 'hot' : badge === 'new' ? 'new' : '';
+  const label = badge === 'featured' ? 'Featured' : badge === 'hot' ? 'Hot Offer' : 'New';
+  return `<div class="prop-badge ${cls}">${label}</div>`;
+}
+
+function renderListingCard(prop, showViewNow = false) {
+  const imgStyle = prop.img ? `background-image:url('${prop.img}')` : prop.imgBg ? `background:${prop.imgBg}` : 'background:var(--stone)';
+  return `<div class="prop-card" onclick="viewProperty(${prop.id})">
+    <div class="prop-img" style="${imgStyle}">
+      ${prop.img ? `<img class="prop-img-tag" src="${prop.img}" alt="${prop.name}" loading="lazy" onerror="this.style.display='none'">` : ''}
+      ${getBadgeHTML(prop.badge)}
+    </div>
+    <div class="prop-body">
+      <h3>${prop.name}</h3>
+      <div class="prop-price">£${prop.price} <span style="font-size:0.85rem;font-weight:400;color:var(--muted);">pcm</span></div>
+      <div class="prop-details">
+        ${prop.beds ? `<span><i class="fas fa-bed"></i> ${prop.beds} Bed${prop.beds>1?'s':''}</span>` : ''}
+        ${prop.baths ? `<span><i class="fas fa-bath"></i> ${prop.baths} Bath${prop.baths>1?'s':''}</span>` : ''}
+        ${prop.size ? `<span><i class="fas fa-ruler-combined"></i> ${prop.size}</span>` : ''}
+      </div>
+      <p class="prop-desc">${prop.desc}</p>
+      <button class="btn-sm" onclick="event.stopPropagation();viewProperty(${prop.id})">${showViewNow ? 'View Now' : 'View Now'}</button>
+    </div>
+  </div>`;
+}
+
+function renderHomeFeatured() {
+  const el = document.getElementById('homeFeaturedListings');
+  if(!el) return;
+  const featured = listings.slice(0,3);
+  el.innerHTML = featured.map(p => renderListingCard(p, true)).join('');
+}
+
+function renderAllListings() {
+  const el = document.getElementById('allListingsGrid');
+  if(!el) return;
+  el.innerHTML = listings.map(p => renderListingCard(p)).join('');
+}
+
+// ═══ PROPERTY DETAIL ═══
+function viewProperty(id) {
+  const prop = listings.find(p => p.id === id);
+  if(!prop) return;
+  prevPage = document.querySelector('.page.active-page')?.id?.replace('-page','') || 'listings';
+  const hero = document.getElementById('propDetailHero');
+  if(prop.img) hero.style.backgroundImage = `url('${prop.img}')`;
+  else hero.style.background = prop.imgBg || 'var(--ink)';
+  document.getElementById('propDetailBadge').innerHTML = getBadgeHTML(prop.badge);
+  document.getElementById('propDetailInfo').innerHTML = `
+    <div class="hero-eyebrow" style="justify-content:flex-start;margin-bottom:0.8rem;"><span>Property Details</span></div>
+    <h1 class="prop-detail-info">${prop.name}</h1>
+    <div class="prop-detail-price">£${prop.price} <span style="font-size:1rem;font-weight:400;color:var(--muted);">per calendar month</span></div>
+    <div class="prop-detail-features">
+      ${prop.beds ? `<span><i class="fas fa-bed"></i> ${prop.beds} Bedroom${prop.beds>1?'s':''}</span>` : ''}
+      ${prop.baths ? `<span><i class="fas fa-bath"></i> ${prop.baths} Bathroom${prop.baths>1?'s':''}</span>` : ''}
+      ${prop.size ? `<span><i class="fas fa-ruler-combined"></i> ${prop.size}</span>` : ''}
+    </div>
+    <p class="prop-detail-desc">${prop.fullDesc || prop.desc}</p>
+    ${prop.amenities && prop.amenities.length ? `
+    <div class="prop-detail-amenities">
+      <h3>Amenities & Features</h3>
+      <div class="amenities-grid">
+        ${prop.amenities.map(a => `<div class="amenity-item"><i class="fas fa-check"></i> ${a}</div>`).join('')}
+      </div>
+    </div>` : ''}
+    <div style="margin-top:1.5rem;"><button class="btn-outline" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back to Listings</button></div>
+  `;
+  document.getElementById('propDetailContact').innerHTML = `
+    <h3>Inquire About This Property</h3>
+    <div class="prop-detail-agent">
+      <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-lt));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--ink);">SQ</div>
+      <div><strong style="font-size:0.9rem;display:block;">Sohail Qureshi</strong><span style="font-size:0.78rem;color:var(--muted);">Managing Director</span></div>
+    </div>
+    <div style="margin-bottom:1rem;">
+      <div class="info-item"><div class="info-icon"><i class="fas fa-phone-alt"></i></div><div class="info-text"><strong>Phone</strong><a href="tel:02030022999">${siteData.phone}</a></div></div>
+      <div class="info-item"><div class="info-icon"><i class="fas fa-envelope"></i></div><div class="info-text"><strong>Email</strong><a href="mailto:${siteData.email}">${siteData.email}</a></div></div>
+    </div>
+    <button class="btn-primary" style="width:100%;margin-bottom:0.7rem;" onclick="inquireAbout(${prop.id})">Send Inquiry</button>
+    <button class="btn-outline" style="width:100%;" onclick="switchPage('contact')">Contact Us</button>
+  `;
+  switchPage('property-detail');
+}
+
+function inquireAbout(id) {
+  const prop = listings.find(p => p.id === id);
+  switchPage('contact');
+  setTimeout(() => {
+    const sel = document.getElementById('propertySelect');
+    if(sel) { for(let i=0;i<sel.options.length;i++) { if(sel.options[i].value == id) { sel.selectedIndex = i; break; }}}
+  }, 200);
+}
+
+function updatePropertySelect() {
+  const sel = document.getElementById('propertySelect');
+  if(!sel) return;
+  sel.innerHTML = listings.map(p => `<option value="${p.id}">${p.name}</option>`).join('') + '<option value="0">General Inquiry</option>';
+}
+
+// ═══ TEAM ═══
+function renderTeam() {
+  const grid = document.getElementById('teamGrid');
+  if(!grid) return;
+  grid.innerHTML = teamMembers.map(m => {
+    const initials = m.name.split(' ').map(w=>w[0]).join('').substring(0,2);
+    return `<div class="team-card reveal">
+      <div class="team-avatar">${initials}</div>
+      <h4>${m.name}</h4>
+      <div class="role">${m.role}</div>
+      <p>${m.bio}</p>
+    </div>`;
+  }).join('');
+  setTimeout(() => initReveal(), 80);
+}
+
+// ═══ CONTACT ═══
+function updateContactDisplay() {
+  const els = {
+    'cnt-display-phone': siteData.phone,
+    'cnt-display-addr': siteData.address,
+    'cnt-display-email': siteData.email,
+    'cnt-display-hours-wk': siteData.hoursWk,
+    'cnt-display-hours-sat': siteData.hoursSat,
+    'badge-areas': siteData.areas,
+    'badge-year': siteData.year,
+    'badge-phone': siteData.phone
+  };
+  Object.entries(els).forEach(([id,val]) => {
+    const el = document.getElementById(id);
+    if(el) el.textContent = val;
+  });
+  const phLink = document.getElementById('cnt-display-phone');
+  if(phLink) phLink.href = 'tel:' + siteData.phone.replace(/\s/g,'');
+  const emLink = document.getElementById('cnt-display-email');
+  if(emLink) emLink.href = 'mailto:' + siteData.email;
+  const adLink = document.getElementById('cnt-display-addr');
+  if(adLink) adLink.href = 'https://maps.google.com/?q=' + encodeURIComponent(siteData.address);
+}
+
+// ═══ CONTACT FORM ═══
+function handleSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('emailAddr').value.trim();
+  const fb = document.getElementById('formFeedback');
+  if(!name||!email) { fb.className='form-feedback error'; fb.textContent='⚠ Please fill in your name and email address.'; return; }
+  const prop = document.getElementById('propertySelect');
+  const propName = prop ? prop.options[prop.selectedIndex]?.text : 'General';
+  fb.className='form-feedback success';
+  fb.innerHTML=`<i class="fas fa-check-circle"></i> Thank you, ${name}! Your inquiry for "${propName}" has been received. A specialist will contact you within 24 hours at ${email}.`;
+  e.target.reset();
+  setTimeout(()=>{fb.style.display='none';fb.className='form-feedback';},7000);
+}
+
+// ═══ ADMIN AUTH ═══
+function openAdminLogin() { document.getElementById('adminLoginOverlay').classList.add('open'); }
+function openAdminLoginFromFooter() { openAdminLogin(); }
+function closeAdminLogin() { document.getElementById('adminLoginOverlay').classList.remove('open'); }
+
+function doAdminLogin() {
+  const email = document.getElementById('adminEmail').value.trim();
+  const pass = document.getElementById('adminPassword').value;
+  const errEl = document.getElementById('adminLoginError');
+  if(email === ADMIN_EMAIL && pass === ADMIN_PASS) {
+    isAdmin = true;
+    closeAdminLogin();
+    openAdminPanel();
+    document.getElementById('adminBar').classList.add('show');
+    showNotification('Welcome to the Admin Panel!','success');
+    renderAdminData();
+  } else {
+    errEl.style.display = 'block';
+    errEl.textContent = 'Incorrect email or password. Please try again.';
+  }
+}
+
+function adminLogout() {
+  isAdmin = false;
+  document.getElementById('adminPanel').classList.remove('open');
+  document.getElementById('adminBar').classList.remove('show');
+  showNotification('Logged out successfully.','success');
+}
+
+function openAdminPanel() { document.getElementById('adminPanel').classList.add('open'); renderAdminData(); }
+function viewWebsite() { document.getElementById('adminPanel').classList.remove('open'); }
+
+// ═══ ADMIN SECTIONS ═══
+function showAdminSection(id) {
+  document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
+  document.getElementById('admin-' + id)?.classList.add('active');
+  document.querySelectorAll('.admin-nav li').forEach(li => {
+    li.classList.toggle('active', li.getAttribute('onclick')?.includes(id));
+  });
+}
+
+function renderAdminData() {
+  renderListingsAdminTable();
+  renderTeamAdmin();
+  renderPagesAdmin();
+  document.getElementById('dash-listings-count').textContent = listings.length;
+  document.getElementById('dash-pages-count').textContent = 7 + customPages.length;
+}
+
+// ═══ ADMIN – LISTINGS ═══
+function renderListingsAdminTable() {
+  const tbody = document.getElementById('listingsAdminBody');
+  if(!tbody) return;
+  tbody.innerHTML = listings.map(p => `<tr>
+    <td><strong>${p.name}</strong></td>
+    <td>£${p.price} pcm</td>
+    <td>${p.beds}</td>
+    <td><span class="admin-badge gold">${p.badge || 'Standard'}</span></td>
+    <td>
+      <button class="action-btn" onclick="editListingPrompt(${p.id})"><i class="fas fa-edit"></i> Edit</button>
+      <button class="action-btn del" onclick="deleteListing(${p.id})"><i class="fas fa-trash"></i></button>
+    </td>
+  </tr>`).join('');
+}
+
+let newPropImgData = null;
+function previewNewPropImage(event) {
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    newPropImgData = e.target.result;
+    document.getElementById('new-prop-img-preview').innerHTML = `<img src="${newPropImgData}" style="width:100%;max-height:160px;object-fit:cover;border-radius:10px;margin-top:0.5rem;">`;
+  };
+  reader.readAsDataURL(file);
+}
+
+function addNewListing() {
+  const name = document.getElementById('new-prop-name').value.trim();
+  const price = document.getElementById('new-prop-price').value.trim();
+  const beds = parseInt(document.getElementById('new-prop-beds').value)||0;
+  const baths = parseInt(document.getElementById('new-prop-baths').value)||0;
+  const size = document.getElementById('new-prop-size').value.trim();
+  const badge = document.getElementById('new-prop-badge').value;
+  const desc = document.getElementById('new-prop-desc').value.trim();
+  const fullDesc = document.getElementById('new-prop-full').value.trim();
+  const amenitiesRaw = document.getElementById('new-prop-amenities').value;
+  const amenities = amenitiesRaw ? amenitiesRaw.split(',').map(s=>s.trim()).filter(Boolean) : [];
+  if(!name || !price) { showNotification('Please provide at least a name and price.','error'); return; }
+  const newId = Date.now();
+  const newProp = {id:newId, name, price, beds, baths, size, badge, desc, fullDesc, amenities, img: newPropImgData||null, imgBg:'linear-gradient(135deg,#E3D5C0,#C6A15B)'};
+  listings.push(newProp);
+  newPropImgData = null;
+  document.getElementById('new-prop-name').value='';
+  document.getElementById('new-prop-price').value='';
+  document.getElementById('new-prop-beds').value='';
+  document.getElementById('new-prop-baths').value='';
+  document.getElementById('new-prop-size').value='';
+  document.getElementById('new-prop-desc').value='';
+  document.getElementById('new-prop-full').value='';
+  document.getElementById('new-prop-amenities').value='';
+  document.getElementById('new-prop-img-preview').innerHTML='';
+  renderAdminData();
+  updatePropertySelect();
+  showNotification(`"${name}" has been added to listings!`,'success');
+}
+
+function deleteListing(id) {
+  if(!confirm('Delete this listing? This cannot be undone.')) return;
+  listings = listings.filter(p => p.id !== id);
+  renderAdminData();
+  updatePropertySelect();
+  showNotification('Listing deleted.','success');
+}
+
+function editListingPrompt(id) {
+  const prop = listings.find(p => p.id === id);
+  if(!prop) return;
+  const newName = prompt('Edit property name:', prop.name);
+  if(newName) prop.name = newName;
+  const newPrice = prompt('Edit price (pcm):', prop.price);
+  if(newPrice) prop.price = newPrice;
+  const newDesc = prompt('Edit description:', prop.desc);
+  if(newDesc) prop.desc = newDesc;
+  renderAdminData();
+  updatePropertySelect();
+  showNotification('Listing updated!','success');
+}
+
+// ═══ ADMIN – TEAM ═══
+function renderTeamAdmin() {
+  const el = document.getElementById('teamAdminList');
+  if(!el) return;
+  el.innerHTML = teamMembers.map((m,i) => `<div style="display:flex;align-items:center;justify-content:space-between;padding:0.8rem;background:var(--stone);border-radius:10px;margin-bottom:0.5rem;gap:1rem;">
+    <div><strong style="font-size:0.88rem;">${m.name}</strong><span style="font-size:0.78rem;color:var(--muted);display:block;">${m.role}</span></div>
+    <button class="action-btn del" onclick="deleteTeamMember(${i})"><i class="fas fa-trash"></i></button>
+  </div>`).join('');
+}
+
+function addTeamMember() {
+  const name = document.getElementById('new-team-name').value.trim();
+  const role = document.getElementById('new-team-role').value.trim();
+  const bio = document.getElementById('new-team-bio').value.trim();
+  if(!name||!role) { showNotification('Please provide a name and role.','error'); return; }
+  teamMembers.push({name,role,bio});
+  document.getElementById('new-team-name').value='';
+  document.getElementById('new-team-role').value='';
+  document.getElementById('new-team-bio').value='';
+  renderTeamAdmin();
+  showNotification(`${name} added to the team!`,'success');
+}
+
+function deleteTeamMember(i) {
+  if(!confirm('Remove this team member?')) return;
+  teamMembers.splice(i,1);
+  renderTeamAdmin();
+  showNotification('Team member removed.','success');
+}
+
+// ═══ ADMIN – PAGES ═══
+function renderPagesAdmin() {
+  const el = document.getElementById('pagesAdminList');
+  if(!el) return;
+  const builtIn = ['Home','About','Listings','Contact','Privacy Policy','Terms of Service','Cookie Policy'];
+  const builtInHTML = builtIn.map(p => `<div style="display:flex;align-items:center;justify-content:space-between;padding:0.7rem;border-bottom:1px solid var(--stone2);font-size:0.84rem;"><span>${p}</span><span class="admin-badge green">Built-in</span></div>`).join('');
+  const customHTML = customPages.map((p,i) => `<div style="display:flex;align-items:center;justify-content:space-between;padding:0.7rem;border-bottom:1px solid var(--stone2);font-size:0.84rem;">
+    <span>${p.title}</span>
+    <div><button class="action-btn" onclick="viewCustomPage(${i})"><i class="fas fa-eye"></i></button> <button class="action-btn del" onclick="deleteCustomPage(${i})"><i class="fas fa-trash"></i></button></div>
+  </div>`).join('');
+  el.innerHTML = `<div style="background:var(--stone);border-radius:10px;overflow:hidden;">${builtInHTML}${customHTML}</div>`;
+}
+
+function createNewPage() {
+  const title = document.getElementById('new-page-title').value.trim();
+  const content = document.getElementById('new-page-content').value.trim();
+  if(!title) { showNotification('Please provide a page title.','error'); return; }
+  const pageId = 'custom-' + Date.now();
+  customPages.push({id:pageId, title, content});
+  // Create the actual DOM page
+  createCustomPageDOM(pageId, title, content);
+  document.getElementById('new-page-title').value='';
+  document.getElementById('new-page-content').value='';
+  renderPagesAdmin();
+  document.getElementById('dash-pages-count').textContent = 7 + customPages.length;
+  showNotification(`Page "${title}" created!`,'success');
+}
+
+function createCustomPageDOM(pageId, title, content) {
+  const container = document.getElementById('custom-pages-container');
+  const div = document.createElement('div');
+  div.id = pageId + '-page';
+  div.className = 'page';
+  div.innerHTML = `<div class="page-hero-dark"><div class="page-hero-dark-inner"><h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:300;color:#fff;">${title}</h1></div></div><div class="legal-content"><p style="white-space:pre-wrap;">${content}</p></div>`;
+  container.appendChild(div);
+}
+
+function viewCustomPage(i) {
+  const p = customPages[i];
+  if(!p) return;
+  document.getElementById('adminPanel').classList.remove('open');
+  switchPage(p.id);
+}
+
+function deleteCustomPage(i) {
+  if(!confirm('Delete this page?')) return;
+  const p = customPages[i];
+  const dom = document.getElementById(p.id + '-page');
+  if(dom) dom.remove();
+  customPages.splice(i,1);
+  renderPagesAdmin();
+  document.getElementById('dash-pages-count').textContent = 7 + customPages.length;
+  showNotification('Page deleted.','success');
+}
+
+// ═══ ADMIN – SETTINGS ═══
+function saveSiteSettings() {
+  siteData.company = document.getElementById('set-company').value;
+  siteData.phone = document.getElementById('set-phone').value;
+  siteData.email = document.getElementById('set-email').value;
+  siteData.address = document.getElementById('set-address').value;
+  siteData.year = document.getElementById('set-year').value;
+  siteData.areas = document.getElementById('set-areas').value;
+  document.getElementById('nav-company-name').textContent = siteData.company.split(' ')[0] + ' ' + siteData.company.split(' ')[1];
+  document.getElementById('footer-company-name').textContent = siteData.company;
+  document.getElementById('badge-phone').textContent = siteData.phone;
+  document.getElementById('badge-areas').textContent = siteData.areas;
+  document.getElementById('badge-year').textContent = siteData.year;
+  document.getElementById('footer-phone').textContent = siteData.phone;
+  document.getElementById('footer-phone').href = 'tel:' + siteData.phone.replace(/\s/g,'');
+  document.getElementById('footer-email').textContent = siteData.email;
+  document.getElementById('footer-email').href = 'mailto:' + siteData.email;
+  updateContactDisplay();
+  showNotification('Site settings saved!','success');
+}
+
+function saveHeroSettings() {
+  siteData.heroH1 = document.getElementById('set-hero-h1').value;
+  siteData.heroSub = document.getElementById('set-hero-sub').value;
+  document.getElementById('hero-sub').textContent = siteData.heroSub;
+  showNotification('Hero section updated!','success');
+}
+
+function saveContactInfo() {
+  siteData.phone = document.getElementById('cnt-phone').value;
+  siteData.email = document.getElementById('cnt-email').value;
+  siteData.address = document.getElementById('cnt-addr1').value + ', ' + document.getElementById('cnt-addr2').value;
+  siteData.hoursWk = document.getElementById('cnt-hours-wk').value;
+  siteData.hoursSat = document.getElementById('cnt-hours-sat').value;
+  updateContactDisplay();
+  showNotification('Contact info updated!','success');
+}
+
+function handleLogoUpload(event) {
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const src = e.target.result;
+    document.getElementById('mainLogo').src = src;
+    document.getElementById('footerLogo').src = src;
+    document.getElementById('logo-preview').innerHTML = `<img src="${src}" style="height:50px;border-radius:8px;margin-top:0.5rem;">`;
+    showNotification('Logo updated!','success');
+  };
+  reader.readAsDataURL(file);
+}
+
+// ═══ AI ASSISTANT ═══
+async function sendAiMessage() {
+  const input = document.getElementById('aiInput');
+  const msg = input.value.trim();
+  if(!msg) return;
+  input.value = '';
+  addAiMessage(msg, 'user');
+  const loadingMsg = addAiMessage('Thinking...', 'ai loading');
+  try {
+    const context = `You are an AI assistant for Premium Home Management, a luxury real estate company in Luton and Greater London. They have ${listings.length} listings. The company was founded in ${siteData.year}. You help the admin edit content, write descriptions, suggest improvements, and answer questions. Be concise and professional.`;
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:context,messages:[{role:'user',content:msg}]})
+    });
+    const data = await res.json();
+    loadingMsg.remove();
+    const text = data.content?.map(c => c.text||'').join('') || 'Sorry, I could not get a response.';
+    addAiMessage(text, 'ai');
+  } catch(err) {
+    loadingMsg.remove();
+    addAiMessage('Unable to connect to AI. Please check your connection and try again.', 'ai');
+  }
+}
+
+function addAiMessage(text, cls) {
+  const container = document.getElementById('aiMessages');
+  const div = document.createElement('div');
+  div.className = 'ai-msg ' + cls;
+  div.textContent = text;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+  return div;
+}
+
+document.getElementById('aiInput')?.addEventListener('keydown', e => { if(e.key === 'Enter') sendAiMessage(); });
+
+// ═══ NOTIFICATION ═══
+function showNotification(msg, type='success') {
+  const el = document.getElementById('notification');
+  el.textContent = msg;
+  el.className = 'notification ' + type + ' show';
+  setTimeout(() => el.classList.remove('show'), 3500);
+}
+
+// ═══ FOOTER YEAR ═══
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+// ═══ INIT ═══
+renderHomeFeatured();
+renderTeam();
+updatePropertySelect();
+updateContactDisplay();
+setTimeout(() => initReveal(), 100);
+startCounters();
+</script>
+</body>
+</html>
